@@ -7,7 +7,25 @@ const app = express()
 const PORT = process.env.PORT || 3000
 
 // Middleware
-app.use(cors())
+const allowedOrigins = [
+  'http://localhost:5173',
+  'https://frysk-foar-heleen.vercel.app',  // Add your actual Vercel URL here
+  // Add your custom domain when you have one
+]
+
+app.use(cors({
+  origin: (origin, callback) => {
+    // Allow requests with no origin (mobile apps, Postman, etc.)
+    if (!origin) return callback(null, true)
+    
+    if (allowedOrigins.indexOf(origin) !== -1) {
+      callback(null, true)
+    } else {
+      callback(new Error('Not allowed by CORS'))
+    }
+  },
+  credentials: true
+}))
 app.use(express.json())
 
 // MongoDB setup
