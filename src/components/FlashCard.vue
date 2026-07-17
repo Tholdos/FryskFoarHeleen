@@ -1,10 +1,5 @@
 <template>
   <div class="flashcard-container">
-    <div class="stats">
-      <span>Score: {{ gameStore.score }}</span>
-      <span>Streak: 🔥 {{ gameStore.streak }}</span>
-    </div>
-
     <div v-if="wordStore.loading" class="loading">
       Loading words...
     </div>
@@ -18,14 +13,13 @@
         <div class="card-front">
           <div class="language-label">Fries</div>
           <div class="word">{{ currentWord.frisian }}</div>
-          <div class="pronunciation">{{ currentWord.pronunciation }}</div>
+          <div class="pronunciation">Uitspraak: {{ currentWord.pronunciation }}</div>
           <AudioPlayer v-if="currentWord.audioUrl" :audioUrl="currentWord.audioUrl" />
-          <div class="hint">👆 Klik om te draaien</div>
+          <div class="hint">Klik om te draaien</div>
         </div>
         <div class="card-back">
           <div class="language-label">Nederlands</div>
           <div class="word">{{ currentWord.dutch }}</div>
-          <div class="category">{{ currentWord.category }}</div>
         </div>
       </div>
 
@@ -79,14 +73,6 @@ function handleKnow() {
   flex-direction: column;
   align-items: center;
   gap: 2rem;
-}
-
-.stats {
-  display: flex;
-  gap: 2rem;
-  font-size: 1.2rem;
-  font-weight: 600;
-  color: #667eea;
 }
 
 .flashcard-wrapper {
@@ -155,15 +141,6 @@ function handleKnow() {
   font-size: 1.2rem;
   opacity: 0.9;
   font-style: italic;
-}
-
-.category {
-  font-size: 1rem;
-  opacity: 0.8;
-  margin-top: 1rem;
-  padding: 0.5rem 1rem;
-  background: rgba(255, 255, 255, 0.2);
-  border-radius: 20px;
 }
 
 .hint {

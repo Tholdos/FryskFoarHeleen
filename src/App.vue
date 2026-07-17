@@ -1,8 +1,7 @@
 <template>
   <div id="app">
     <header class="app-header">
-      <h1>🇳🇱 Frysk Foar Heleen 🇳🇱</h1>
-      <p class="subtitle">Leer de Friese taal met flashcards</p>
+      <h1>Frysk foar Heleen</h1>
     </header>
 
     <main class="app-main">
@@ -11,19 +10,19 @@
           @click="currentGame = 'flashcard'" 
           :class="{ active: currentGame === 'flashcard' }"
         >
-          📇 Flashcards
+          Flashcards
         </button>
         <button 
           @click="currentGame = 'matching'" 
           :class="{ active: currentGame === 'matching' }"
         >
-          🎯 Koppelen
+          Koppelen
         </button>
         <button 
           @click="currentGame = 'typing'" 
           :class="{ active: currentGame === 'typing' }"
         >
-          ⌨️ Typen
+          Typen
         </button>
       </nav>
 
@@ -68,22 +67,34 @@ onMounted(async () => {
 <style scoped>
 .app-header {
   text-align: center;
-  padding: 2rem;
+  padding: 3rem 2rem;
   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   color: white;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  position: relative;
+  overflow: hidden;
+}
+
+.app-header::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url('/Pompeblêd.svg');
+  background-repeat: repeat;
+  background-size: 150px 150px;
+  opacity: 0.15;
+  pointer-events: none;
 }
 
 .app-header h1 {
   margin: 0;
   font-size: 2.5rem;
   font-weight: bold;
-}
-
-.subtitle {
-  margin: 0.5rem 0 0 0;
-  font-size: 1.2rem;
-  opacity: 0.9;
+  position: relative;
+  z-index: 1;
 }
 
 .app-main {

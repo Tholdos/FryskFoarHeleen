@@ -3,7 +3,6 @@
     <div class="game-header">
       <h2>Typ de vertaling</h2>
       <div class="stats">
-        <span>Score: {{ gameStore.score }}</span>
         <span>{{ correctCount }}/{{ totalQuestions }}</span>
       </div>
     </div>
@@ -20,7 +19,7 @@
           Nederlands → Fries
         </label>
       </div>
-      <button @click="startGame" class="btn-start">Start Spel</button>
+      <button @click="startGame" class="btn-start">Start spel</button>
     </div>
 
     <div v-else-if="gameComplete" class="complete-screen">

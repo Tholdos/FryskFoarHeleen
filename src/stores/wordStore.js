@@ -91,7 +91,9 @@ export const useWordStore = defineStore('word', () => {
   }
 
   function nextWord() {
-    currentWord.value = getRandomWord.value
+    if (words.value.length === 0) return
+    const randomIndex = Math.floor(Math.random() * words.value.length)
+    currentWord.value = words.value[randomIndex]
   }
 
   function getRandomWords(count) {

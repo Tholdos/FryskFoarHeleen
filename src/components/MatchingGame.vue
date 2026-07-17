@@ -2,12 +2,11 @@
   <div class="matching-game">
     <div class="game-header">
       <h2>Koppel de juiste woorden</h2>
-      <div class="score">Score: {{ gameStore.score }}</div>
     </div>
 
     <div v-if="!gameStarted" class="start-screen">
       <p>Koppel 5 Friese woorden aan hun Nederlandse vertaling</p>
-      <button @click="startGame" class="btn-start">Start Spel</button>
+      <button @click="startGame" class="btn-start">Start spel</button>
     </div>
 
     <div v-else-if="gameComplete" class="complete-screen">
@@ -157,12 +156,6 @@ function checkMatch() {
 
 .game-header h2 {
   margin: 0 0 0.5rem 0;
-  color: #667eea;
-}
-
-.score {
-  font-size: 1.2rem;
-  font-weight: 600;
   color: #667eea;
 }
 

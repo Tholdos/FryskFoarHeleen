@@ -63,24 +63,6 @@ connectDB().then(connected => {
 const fallbackWords = [
   {
     _id: '1',
-    frisian: 'hûs',
-    dutch: 'huis',
-    pronunciation: 'hoos',
-    audioUrl: null,
-    category: 'zelfstandig naamwoord',
-    difficulty: 1
-  },
-  {
-    _id: '2',
-    frisian: 'heit',
-    dutch: 'vader',
-    pronunciation: 'hait',
-    audioUrl: null,
-    category: 'familie',
-    difficulty: 1
-  },
-  {
-    _id: '3',
     frisian: 'mem',
     dutch: 'moeder',
     pronunciation: 'mem',
@@ -89,67 +71,121 @@ const fallbackWords = [
     difficulty: 1
   },
   {
+    _id: '2',
+    frisian: 'heit',
+    dutch: 'vader',
+    pronunciation: 'ergens tussen "haait" en "hòòit"',
+    audioUrl: null,
+    category: 'familie',
+    difficulty: 1
+  },
+  {
+    _id: '3',
+    frisian: 'beppe',
+    dutch: 'oma',
+    pronunciation: 'beppe',
+    audioUrl: null,
+    category: 'zelfstandig naamwoord',
+    difficulty: 1
+  },
+  {
     _id: '4',
-    frisian: 'wetter',
-    dutch: 'water',
-    pronunciation: 'vetter',
+    frisian: 'pake',
+    dutch: 'opa',
+    pronunciation: 'pake',
     audioUrl: null,
     category: 'zelfstandig naamwoord',
     difficulty: 1
   },
   {
     _id: '5',
-    frisian: 'wyn',
-    dutch: 'wind',
-    pronunciation: 'win',
+    frisian: 'ien',
+    dutch: 'een',
+    pronunciation: 'zoals de Engelse naam "Ian"',
     audioUrl: null,
-    category: 'zelfstandig naamwoord',
+    category: 'cijfers',
     difficulty: 1
   },
   {
     _id: '6',
-    frisian: 'leafde',
-    dutch: 'liefde',
-    pronunciation: 'leevde',
+    frisian: 'twa',
+    dutch: 'twee',
+    pronunciation: 'twa',
     audioUrl: null,
-    category: 'zelfstandig naamwoord',
+    category: 'cijfers',
     difficulty: 2
   },
   {
     _id: '7',
-    frisian: 'boek',
-    dutch: 'boek',
-    pronunciation: 'book',
+    frisian: 'trije',
+    dutch: 'drie',
+    pronunciation: 'trije',
     audioUrl: null,
-    category: 'zelfstandig naamwoord',
+    category: 'cijfers',
     difficulty: 1
   },
   {
     _id: '8',
-    frisian: 'berntsje',
-    dutch: 'kind',
-    pronunciation: 'berntsjuh',
+    frisian: 'fjouwer',
+    dutch: 'vier',
+    pronunciation: 'fjouwer',
     audioUrl: null,
-    category: 'familie',
+    category: 'cijfers',
     difficulty: 2
   },
   {
     _id: '9',
-    frisian: 'dei',
-    dutch: 'dag',
-    pronunciation: 'dai',
+    frisian: 'fiif',
+    dutch: 'vijf',
+    pronunciation: 'fiif met een langgerekte "i"',
     audioUrl: null,
-    category: 'tijd',
-    difficulty: 1
+    category: 'cijfers',
+    difficulty: 2
   },
   {
     _id: '10',
-    frisian: 'nacht',
-    dutch: 'nacht',
-    pronunciation: 'nacht',
+    frisian: 'seis',
+    dutch: 'zes',
+    pronunciation: 'ergens tussen "saais" en "sòòìs"',
     audioUrl: null,
-    category: 'tijd',
-    difficulty: 1
+    category: 'cijfers',
+    difficulty: 2
+  },
+  {
+    _id: '11',
+    frisian: 'sân',
+    dutch: 'zeven',
+    pronunciation: 'Soo-wun, rijmt ongeveer op de Engelse naam "Owen", maar dan iets sneller uitgesproken',
+    audioUrl: null,
+    category: 'cijfers',
+    difficulty: 2
+  },
+  {
+    _id: '12',
+    frisian: 'acht',
+    dutch: 'acht',
+    pronunciation: 'acht',
+    audioUrl: null,
+    category: 'cijfers',
+    difficulty: 2
+  },
+  {
+    _id: '13',
+    frisian: 'njoggen',
+    dutch: 'negen',
+    pronunciation: 'njoggen',
+    audioUrl: null,
+    category: 'cijfers',
+    difficulty: 2
+  },
+  {
+    _id: '14',
+    frisian: 'tsien',
+    dutch: 'tien',
+    pronunciation: 'rijmt op "Ian"',
+    audioUrl: null,
+    category: 'cijfers',
+    difficulty: 2
   }
 ]
 
