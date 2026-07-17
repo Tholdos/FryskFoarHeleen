@@ -38,7 +38,7 @@
     </main>
 
     <footer class="app-footer">
-      <p>Made with ❤️ for Heleen</p>
+      <p><img src="/Pompeblêd.svg" class="footer-icon" alt="" /> voor Heleen</p>
     </footer>
   </div>
 </template>
@@ -153,5 +153,13 @@ onMounted(async () => {
   padding: 2rem;
   color: #666;
   font-size: 0.9rem;
+}
+
+.footer-icon {
+  height: 1.3em;
+  width: auto;
+  vertical-align: middle;
+  display: inline-block;
+  margin: 0 0.2em;
 }
 </style>

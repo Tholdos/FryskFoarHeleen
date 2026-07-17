@@ -24,9 +24,6 @@
       </div>
 
       <div class="controls">
-        <button @click="handleKnow" class="btn-know">
-          ✓ Ik wist het
-        </button>
         <button @click="nextCard" class="btn-next">
           Volgende →
         </button>
@@ -59,11 +56,6 @@ function nextCard() {
   wordStore.nextWord()
   isFlipped.value = false
   gameStore.recordAttempt()
-}
-
-function handleKnow() {
-  gameStore.incrementScore()
-  nextCard()
 }
 </script>
 
@@ -163,17 +155,6 @@ function handleKnow() {
   cursor: pointer;
   font-weight: 600;
   transition: all 0.3s ease;
-}
-
-.btn-know {
-  background: #48bb78;
-  color: white;
-}
-
-.btn-know:hover {
-  background: #38a169;
-  transform: translateY(-2px);
-  box-shadow: 0 4px 8px rgba(72, 187, 120, 0.3);
 }
 
 .btn-next {

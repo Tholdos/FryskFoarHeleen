@@ -1,7 +1,7 @@
 <template>
   <div class="matching-game">
     <div class="game-header">
-      <h2>Koppel de juiste woorden</h2>
+      <h2>Koppel de woorden aan elkaar</h2>
     </div>
 
     <div v-if="!gameStarted" class="start-screen">
