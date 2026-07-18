@@ -66,126 +66,168 @@ const fallbackWords = [
     frisian: 'mem',
     dutch: 'moeder',
     pronunciation: 'mem',
-    audioUrl: null,
-    category: 'familie',
-    difficulty: 1
+    audioUrl: null
   },
   {
     _id: '2',
     frisian: 'heit',
     dutch: 'vader',
     pronunciation: 'ergens tussen "haait" en "hòòit"',
-    audioUrl: null,
-    category: 'familie',
-    difficulty: 1
+    audioUrl: null
   },
   {
     _id: '3',
     frisian: 'beppe',
     dutch: 'oma',
     pronunciation: 'beppe',
-    audioUrl: null,
-    category: 'zelfstandig naamwoord',
-    difficulty: 1
+    audioUrl: null
   },
   {
     _id: '4',
     frisian: 'pake',
     dutch: 'opa',
     pronunciation: 'pake',
-    audioUrl: null,
-    category: 'zelfstandig naamwoord',
-    difficulty: 1
+    audioUrl: null
   },
   {
     _id: '5',
     frisian: 'ien',
     dutch: 'een',
     pronunciation: 'zoals de Engelse naam "Ian"',
-    audioUrl: null,
-    category: 'cijfers',
-    difficulty: 1
+    audioUrl: null
   },
   {
     _id: '6',
     frisian: 'twa',
     dutch: 'twee',
     pronunciation: 'twa',
-    audioUrl: null,
-    category: 'cijfers',
-    difficulty: 2
+    audioUrl: null
   },
   {
     _id: '7',
     frisian: 'trije',
     dutch: 'drie',
     pronunciation: 'trije',
-    audioUrl: null,
-    category: 'cijfers',
-    difficulty: 1
+    audioUrl: null
   },
   {
     _id: '8',
     frisian: 'fjouwer',
     dutch: 'vier',
     pronunciation: 'fjouwer',
-    audioUrl: null,
-    category: 'cijfers',
-    difficulty: 2
+    audioUrl: null
   },
   {
     _id: '9',
     frisian: 'fiif',
     dutch: 'vijf',
     pronunciation: 'fiif met een langgerekte "i"',
-    audioUrl: null,
-    category: 'cijfers',
-    difficulty: 2
+    audioUrl: null
   },
   {
     _id: '10',
     frisian: 'seis',
     dutch: 'zes',
     pronunciation: 'ergens tussen "saais" en "sòòìs"',
-    audioUrl: null,
-    category: 'cijfers',
-    difficulty: 2
+    audioUrl: null
   },
   {
     _id: '11',
     frisian: 'sân',
     dutch: 'zeven',
     pronunciation: 'Soo-wun, rijmt ongeveer op de Engelse naam "Owen", maar dan iets sneller uitgesproken',
-    audioUrl: null,
-    category: 'cijfers',
-    difficulty: 2
+    audioUrl: null
   },
   {
     _id: '12',
     frisian: 'acht',
     dutch: 'acht',
     pronunciation: 'acht',
-    audioUrl: null,
-    category: 'cijfers',
-    difficulty: 2
+    audioUrl: null
   },
   {
     _id: '13',
     frisian: 'njoggen',
     dutch: 'negen',
     pronunciation: 'njoggen',
-    audioUrl: null,
-    category: 'cijfers',
-    difficulty: 2
+    audioUrl: null
   },
   {
     _id: '14',
     frisian: 'tsien',
     dutch: 'tien',
     pronunciation: 'rijmt op "Ian"',
-    audioUrl: null,
-    category: 'cijfers',
-    difficulty: 2
+    audioUrl: null
+  },
+  {
+    _id: '15',
+    frisian: 'dei',
+    dutch: 'dag',
+    pronunciation: 'ergens tussen "daai" en "dòòi"',
+    audioUrl: null
+  },
+  {
+    _id: '16',
+    frisian: 'nacht',
+    dutch: 'nacht',
+    pronunciation: 'nacht',
+    audioUrl: null
+  },
+  {
+    _id: '17',
+    frisian: 'swart',
+    dutch: 'zwart',
+    pronunciation: 'swat',
+    audioUrl: null
+  },
+  {
+    _id: '18',
+    frisian: 'wyt',
+    dutch: 'wit',
+    pronunciation: 'wiet',
+    audioUrl: null
+  },
+  {
+    _id: '19',
+    frisian: 'sinne',
+    dutch: 'zon',
+    pronunciation: 'sinne',
+    audioUrl: null
+  },
+  {
+    _id: '20',
+    frisian: 'moanne',
+    dutch: 'maan',
+    pronunciation: 'mwanne',
+    audioUrl: null
+  },
+  {
+    _id: '21',
+    frisian: 'lang',
+    dutch: 'lang',
+    pronunciation: 'lang',
+    audioUrl: null
+  },
+  {
+    _id: '22',
+    frisian: 'koart',
+    dutch: 'kort',
+    pronunciation: 'kwat',
+    audioUrl: null
+  },
+  {
+    _id: '23',
+    frisian: 'hûn',
+    dutch: 'hond',
+    pronunciation: 'hoen',
+    audioUrl: null
+  },
+  {
+    _id: '24',
+    frisian: 'kat',
+    dutch: 'kat',
+    pronunciation: 'kot',
+    audioUrl: null
   }
 ]
 
@@ -264,7 +306,7 @@ app.get('/api/words/:id', async (req, res) => {
 // Add new word (for future admin functionality)
 app.post('/api/words', async (req, res) => {
   try {
-    const { frisian, dutch, pronunciation, audioUrl, category, difficulty } = req.body
+    const { frisian, dutch, pronunciation, audioUrl } = req.body
     
     if (!frisian || !dutch) {
       return res.status(400).json({ error: 'Frisian and Dutch translations are required' })
@@ -275,8 +317,6 @@ app.post('/api/words', async (req, res) => {
       dutch,
       pronunciation: pronunciation || '',
       audioUrl: audioUrl || null,
-      category: category || 'general',
-      difficulty: difficulty || 1,
       createdAt: new Date()
     }
     
