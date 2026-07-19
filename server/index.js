@@ -310,7 +310,12 @@ app.get('/api/words', async (req, res) => {
   try {
     if (dbConnected && wordsCollection) {
       const words = await wordsCollection.find({}).toArray()
-      res.json(words)
+      // If MongoDB is empty, use fallback data
+      if (words.length === 0) {
+        res.json(fallbackWords)
+      } else {
+        res.json(words)
+      }
     } else {
       // Use fallback data
       res.json(fallbackWords)
@@ -330,7 +335,13 @@ app.get('/api/words/random/:count', async (req, res) => {
       const words = await wordsCollection.aggregate([
         { $sample: { size: count } }
       ]).toArray()
-      res.json(words)
+      // If MongoDB is empty, use fallback data
+      if (words.length === 0) {
+        const shuffled = [...fallbackWords].sort(() => Math.random() - 0.5)
+        res.json(shuffled.slice(0, count))
+      } else {
+        res.json(words)
+      }
     } else {
       // Use fallback data
       const shuffled = [...fallbackWords].sort(() => Math.random() - 0.5)
