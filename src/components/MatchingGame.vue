@@ -116,13 +116,13 @@ function checkMatch() {
     
     setTimeout(() => {
       feedback.value = null
-    }, 1000)
+    }, 250)
     
     // Check if game is complete
     if (matchedPairs.value.length === frisianWords.value.length) {
       setTimeout(() => {
         gameComplete.value = true
-      }, 1000)
+      }, 250)
     }
   } else {
     // Wrong match
@@ -133,7 +133,7 @@ function checkMatch() {
     
     setTimeout(() => {
       feedback.value = null
-    }, 1000)
+    }, 250)
   }
   
   selectedFrisian.value = null
