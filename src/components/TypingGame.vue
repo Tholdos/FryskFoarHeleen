@@ -52,7 +52,7 @@
           <input 
             ref="answerInput"
             v-model="userAnswer"
-            @keyup.enter="checkAnswer"
+            @keyup.enter="handleEnter"
             type="text"
             class="answer-input"
             :class="{ 
@@ -151,6 +151,16 @@ function checkAnswer() {
   }
   
   gameStore.recordAttempt()
+}
+
+function handleEnter() {
+  if (feedback.value) {
+    // If feedback is showing, go to next question
+    nextQuestion()
+  } else {
+    // Otherwise, check the answer
+    checkAnswer()
+  }
 }
 
 function nextQuestion() {
