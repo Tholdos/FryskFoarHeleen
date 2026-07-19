@@ -1,5 +1,6 @@
 const express = require('express')
 const cors = require('cors')
+const path = require('path')
 const { MongoClient, ObjectId } = require('mongodb')
 require('dotenv').config()
 
@@ -27,6 +28,9 @@ app.use(cors({
   credentials: true
 }))
 app.use(express.json())
+
+// Serve static audio files
+app.use('/api/audio', express.static(path.join(__dirname, 'public/audio')))
 
 // MongoDB setup
 const MONGODB_URI = process.env.MONGODB_URI
@@ -406,12 +410,8 @@ app.post('/api/words', async (req, res) => {
   }
 })
 
-// Serve audio files (placeholder for now)
-app.get('/api/audio/:filename', (req, res) => {
-  // TODO: Implement audio file serving
-  // This will serve audio files from storage (GridFS, Vercel Blob, or file system)
-  res.status(404).json({ error: 'Audio not implemented yet' })
-})
+// Audio files are served via static middleware above
+// Place MP3 files in server/public/audio/ and they'll be available at /api/audio/filename.mp3
 
 // Start server
 app.listen(PORT, () => {
