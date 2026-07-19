@@ -39,7 +39,7 @@
       <button @click="startGame" class="btn-restart">Opnieuw Spelen</button>
     </div>
 
-    <div v-else class="game-board">
+    <div v-else class="game-board" @keyup.enter="handleEnter">
       <div class="question-card">
         <div class="question-number">
           Vraag {{ currentQuestionIndex + 1 }} / {{ totalQuestions }}
