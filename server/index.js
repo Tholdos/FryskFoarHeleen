@@ -228,6 +228,76 @@ const fallbackWords = [
     dutch: 'kat',
     pronunciation: 'kot',
     audioUrl: null
+  },
+  {
+    _id: '25',
+    frisian: 'giel',
+    dutch: 'geel',
+    pronunciation: 'geel met een harde g-klank, zoals in het Engelse woord "go" (officieel Friese uitspraak is met een ieje-klank, maar dat doet bijna niemand)',
+    audioUrl: null
+  },
+  {
+    _id: '26',
+    frisian: 'grien',
+    dutch: 'groen',
+    pronunciation: 'rijmt op "Ian", met een harde g-klank, zoals in het Engelse woord "go"',
+    audioUrl: null
+  },
+  {
+    _id: '27',
+    frisian: 'kat',
+    dutch: 'kat',
+    pronunciation: 'kot',
+    audioUrl: null
+  },
+  {
+    _id: '28',
+    frisian: 'kat',
+    dutch: 'kat',
+    pronunciation: 'kot',
+    audioUrl: null
+  },
+  {
+    _id: '29',
+    frisian: 'kat',
+    dutch: 'kat',
+    pronunciation: 'kot',
+    audioUrl: null
+  },
+  {
+    _id: '30',
+    frisian: 'kat',
+    dutch: 'kat',
+    pronunciation: 'kot',
+    audioUrl: null
+  },
+  {
+    _id: '31',
+    frisian: 'kat',
+    dutch: 'kat',
+    pronunciation: 'kot',
+    audioUrl: null
+  },
+  {
+    _id: '32',
+    frisian: 'kat',
+    dutch: 'kat',
+    pronunciation: 'kot',
+    audioUrl: null
+  },
+  {
+    _id: '33',
+    frisian: 'kat',
+    dutch: 'kat',
+    pronunciation: 'kot',
+    audioUrl: null
+  },
+  {
+    _id: '34',
+    frisian: 'kat',
+    dutch: 'kat',
+    pronunciation: 'kot',
+    audioUrl: null
   }
 ]
 
