@@ -19,11 +19,21 @@
           Nederlands → Fries
         </label>
       </div>
+      <div class="word-count-selector">
+        <label for="wordCount">Aantal woorden:</label>
+        <input 
+          id="wordCount"
+          v-model.number="totalQuestions" 
+          type="number" 
+          min="5" 
+          max="25" 
+          class="word-count-input"
+        />
+      </div>
       <button @click="startGame" class="btn-start">Start spel</button>
     </div>
 
     <div v-else-if="gameComplete" class="complete-screen">
-      <h2>🎉 Spel Afgelopen!</h2>
       <p class="final-score">Score: {{ correctCount }}/{{ totalQuestions }}</p>
       <p class="percentage">{{ Math.round((correctCount / totalQuestions) * 100) }}% correct</p>
       <button @click="startGame" class="btn-restart">Opnieuw Spelen</button>
@@ -110,12 +120,15 @@ const userAnswer = ref('')
 const feedback = ref(null)
 const correctCount = ref(0)
 const answerInput = ref(null)
-
-const totalQuestions = 5
+const totalQuestions = ref(10) // Default to 10 questions
 
 const currentQuestion = computed(() => questions.value[currentQuestionIndex.value])
 
 function startGame() {
+  // Validate and clamp totalQuestions
+  if (totalQuestions.value < 5) totalQuestions.value = 5
+  if (totalQuestions.value > 25) totalQuestions.value = 25
+  
   gameStarted.value = true
   gameComplete.value = false
   currentQuestionIndex.value = 0
@@ -124,7 +137,7 @@ function startGame() {
   userAnswer.value = ''
   
   // Get random words for questions
-  const words = wordStore.getRandomWords(totalQuestions)
+  const words = wordStore.getRandomWords(totalQuestions.value)
   questions.value = words.map(word => ({
     prompt: direction.value === 'fry-nl' ? word.frisian : word.dutch,
     correctAnswer: direction.value === 'fry-nl' ? word.dutch : word.frisian,
@@ -164,7 +177,7 @@ function handleEnter() {
 }
 
 function nextQuestion() {
-  if (currentQuestionIndex.value < totalQuestions - 1) {
+  if (currentQuestionIndex.value < totalQuestions.value - 1) {
     currentQuestionIndex.value++
     userAnswer.value = ''
     feedback.value = null
@@ -234,6 +247,35 @@ function nextQuestion() {
 
 .difficulty-selector input[type="radio"] {
   cursor: pointer;
+}
+
+.word-count-selector {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 2rem;
+  align-items: center;
+}
+
+.word-count-selector label {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #333;
+}
+
+.word-count-input {
+  padding: 0.5rem 1rem;
+  font-size: 1.1rem;
+  border: 2px solid #e2e8f0;
+  border-radius: 8px;
+  text-align: center;
+  width: 100px;
+  transition: border-color 0.2s ease;
+}
+
+.word-count-input:focus {
+  outline: none;
+  border-color: #667eea;
 }
 
 .final-score {
