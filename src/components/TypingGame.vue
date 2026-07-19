@@ -120,7 +120,6 @@ const feedback = ref(null)
 const correctCount = ref(0)
 const answerInput = ref(null)
 const totalQuestions = ref(10) // Default to 10 questions
-const canProceed = ref(true) // Flag to prevent immediate Enter after checking
 
 const currentQuestion = computed(() => questions.value[currentQuestionIndex.value])
 
@@ -179,19 +178,13 @@ function checkAnswer() {
   }
   
   gameStore.recordAttempt()
-  
-  // Prevent immediate proceed, wait 500ms to show feedback
-  canProceed.value = false
-  setTimeout(() => {
-    canProceed.value = true
-  }, 500)
 }
 
 function handleEnter() {
-  if (feedback.value && canProceed.value) {
-    // If feedback is showing and enough time has passed, go to next question
+  if (feedback.value) {
+    // If feedback is showing, go to next question
     nextQuestion()
-  } else if (!feedback.value) {
+  } else {
     // Otherwise, check the answer
     checkAnswer()
   }
@@ -202,7 +195,6 @@ function nextQuestion() {
     currentQuestionIndex.value++
     userAnswer.value = ''
     feedback.value = null
-    canProceed.value = true
     
     nextTick(() => {
       answerInput.value?.focus()
