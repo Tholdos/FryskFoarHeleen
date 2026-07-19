@@ -39,7 +39,7 @@
       <button @click="startGame" class="btn-restart">Opnieuw Spelen</button>
     </div>
 
-    <div v-else class="game-board" @keyup.enter="handleEnter">
+    <div v-else class="game-board">
       <div class="question-card">
         <div class="question-number">
           Vraag {{ currentQuestionIndex + 1 }} / {{ totalQuestions }}
@@ -62,7 +62,6 @@
           <input 
             ref="answerInput"
             v-model="userAnswer"
-            @keyup.enter="handleEnter"
             type="text"
             class="answer-input"
             :class="{ 
@@ -104,7 +103,7 @@
 </template>
 
 <script setup>
-import { ref, computed, nextTick } from 'vue'
+import { ref, computed, nextTick, onMounted, onUnmounted } from 'vue'
 import { useWordStore } from '../stores/wordStore'
 import { useGameStore } from '../stores/gameStore'
 
@@ -124,6 +123,21 @@ const totalQuestions = ref(10) // Default to 10 questions
 const canProceed = ref(true) // Flag to prevent immediate Enter after checking
 
 const currentQuestion = computed(() => questions.value[currentQuestionIndex.value])
+
+// Handle keyboard events at document level
+function handleKeyPress(event) {
+  if (event.key === 'Enter' && gameStarted.value && !gameComplete.value) {
+    handleEnter()
+  }
+}
+
+onMounted(() => {
+  document.addEventListener('keyup', handleKeyPress)
+})
+
+onUnmounted(() => {
+  document.removeEventListener('keyup', handleKeyPress)
+})
 
 function startGame() {
   // Validate and clamp totalQuestions
