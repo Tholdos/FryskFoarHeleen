@@ -101,9 +101,19 @@ function flipCard() {
 }
 
 function nextCard() {
-  wordStore.nextWord()
-  isFlipped.value = false
-  gameStore.recordAttempt()
+  // If card is flipped, flip it back first before changing word
+  if (isFlipped.value) {
+    isFlipped.value = false
+    // Wait for flip animation to complete (0.6s) before loading next word
+    setTimeout(() => {
+      wordStore.nextWord()
+      gameStore.recordAttempt()
+    }, 600)
+  } else {
+    // Card is already showing front, can change immediately
+    wordStore.nextWord()
+    gameStore.recordAttempt()
+  }
 }
 
 function toggleDirection() {
