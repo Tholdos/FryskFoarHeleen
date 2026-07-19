@@ -121,7 +121,7 @@ const fallbackWords = [
     _id: '9',
     frisian: 'fiif',
     dutch: 'vijf',
-    pronunciation: 'fiif met een langgerekte "i"',
+    pronunciation: 'fiif met een lange "i" zoals in het Engelse "see"',
     audioUrl: null
   },
   {
@@ -233,70 +233,63 @@ const fallbackWords = [
     _id: '25',
     frisian: 'giel',
     dutch: 'geel',
-    pronunciation: 'geel met een harde g-klank, zoals in het Engelse woord "go" (officieel Friese uitspraak is met een ieje-klank, maar dat doet bijna niemand)',
+    pronunciation: 'geel met een harde g-klank, zoals in het Engelse "go" (officieel met een ieje-klank, maar dat doet bijna niemand)',
     audioUrl: null
   },
   {
     _id: '26',
     frisian: 'grien',
     dutch: 'groen',
-    pronunciation: 'rijmt op "Ian", met een harde g-klank, zoals in het Engelse woord "go"',
+    pronunciation: 'rijmt op "Ian", met een harde g-klank, zoals in het Engelse "go"',
     audioUrl: null
   },
   {
     _id: '27',
-    frisian: 'kat',
-    dutch: 'kat',
-    pronunciation: 'kot',
+    frisian: 'read',
+    dutch: 'rood',
+    pronunciation: 'ree-ut (een e-klank die overgaat in een uh-klank)',
     audioUrl: null
   },
   {
     _id: '28',
-    frisian: 'kat',
-    dutch: 'kat',
-    pronunciation: 'kot',
+    frisian: 'blau',
+    dutch: 'blauw',
+    pronunciation: 'blauw',
     audioUrl: null
   },
   {
     _id: '29',
-    frisian: 'kat',
-    dutch: 'kat',
-    pronunciation: 'kot',
+    frisian: 'bôle',
+    dutch: 'brood',
+    pronunciation: 'bòòle (met een lange òòh-klank)',
     audioUrl: null
   },
   {
     _id: '30',
-    frisian: 'kat',
-    dutch: 'kat',
-    pronunciation: 'kot',
+    frisian: 'bûter',
+    dutch: 'boter',
+    pronunciation: 'boeter',
     audioUrl: null
   },
   {
     _id: '31',
-    frisian: 'kat',
-    dutch: 'kat',
-    pronunciation: 'kot',
+    frisian: 'tsiis',
+    dutch: 'kaas',
+    pronunciation: 'tsiis met een lange "i" zoals in het Engelse "see"',
     audioUrl: null
   },
   {
     _id: '32',
-    frisian: 'kat',
-    dutch: 'kat',
-    pronunciation: 'kot',
+    frisian: 'iis',
+    dutch: 'ijs',
+    pronunciation: 'iis met een lange "i" zoals in het Engelse "see"',
     audioUrl: null
   },
   {
     _id: '33',
-    frisian: 'kat',
-    dutch: 'kat',
-    pronunciation: 'kot',
-    audioUrl: null
-  },
-  {
-    _id: '34',
-    frisian: 'kat',
-    dutch: 'kat',
-    pronunciation: 'kot',
+    frisian: 'wetter',
+    dutch: 'water',
+    pronunciation: 'wetter',
     audioUrl: null
   }
 ]
