@@ -136,7 +136,7 @@ const fallbackWords = [
     _id: '10',
     frisian: 'seis',
     dutch: 'zes',
-    pronunciation: 'ergens tussen "saais" en "òòìs"',
+    pronunciation: 'ergens tussen "saais" en "sòòìs"',
     audioUrl: 'seis.mp3'
   },
   {
@@ -439,84 +439,84 @@ const fallbackSounds = [
     combination: 'aai',
     pronunciation: 'Tussen "aai" en "òòi"',
     example: 'kaai (sleutel)',
-    audioUrl: null
+    audioUrl: 'aai.mp3'
   },
   {
     _id: 'snd2',
     combination: 'ie',
     pronunciation: 'ieje (zoals het begin van de naam "Ian")',
     example: 'wiet (nat)',
-    audioUrl: null
+    audioUrl: 'ie.mp3'
   },
   {
     _id: 'snd3',
     combination: 'ea',
     pronunciation: 'eejuh (zoals in Engels "player")',
     example: 'read (rood)',
-    audioUrl: null
+    audioUrl: 'ea.mp3'
   },
   {
     _id: 'snd4',
     combination: 'oa',
     pronunciation: 'óówùh (zoals in Engels "Owen", zie ook "â"), of wha (zoals in Engels "what")',
     example: 'boat (boot) of foar (voor)',
-    audioUrl: null
+    audioUrl: 'oa.mp3'
   },
   {
     _id: 'snd5',
     combination: 'oe',
     pronunciation: 'oewuh (zoals in Nederlands "boer")',
     example: 'goed (goed)',
-    audioUrl: null
+    audioUrl: 'oe.mp3'
   },
   {
     _id: 'snd6',
     combination: 'ei',
     pronunciation: 'Tussen "aai" en "òòi" (zie ook "aai") of ei (zoals in NL "ei")',
     example: 'heit (vader) of rein (regen)',
-    audioUrl: null
+    audioUrl: 'ei.mp3'
   },
   {
     _id: 'snd7',
     combination: 'ô',
     pronunciation: 'òòh (zoals in NL "òòh!", zie ook "â")',
     example: 'bôle (brood)',
-    audioUrl: null
+    audioUrl: 'ô.mp3'
   },
   {
     _id: 'snd8',
     combination: 'û',
     pronunciation: 'oeh (langgerekt, zoals in "boeeeh!" of kort zoals in "boek"',
     example: 'hûs (huis) of bûten (buiten)',
-    audioUrl: null
+    audioUrl: 'û.mp3'
   },
   {
     _id: 'snd9',
     combination: 'â',
     pronunciation: 'òòh (zoals in NL "òòh!", zie ook "ô") of óówùh (zoals in Engels "Owen", zie ook "oa")',
     example: 'wâl (wal) of lân (land)',
-    audioUrl: null
+    audioUrl: 'â.mp3'
   },
   {
     _id: 'snd10',
     combination: 'ô',
     pronunciation: 'òò (zoals in NL "òòh!")',
     example: 'bôle (brood)',
-    audioUrl: null
+    audioUrl: 'ô.mp3'
   },
   {
     _id: 'snd11',
     combination: 'ê',
     pronunciation: 'èè (zoals in "bèèh", van een schaap)',
     example: 'hê (hooien)',
-    audioUrl: null
+    audioUrl: 'ê.mp3'
   },
   {
     _id: 'snd12',
     combination: 'y',
     pronunciation: 'ie (zoals in NL "zien")',
     example: 'wyn (wind)',
-    audioUrl: null
+    audioUrl: 'y.mp3'
   }
 ]
 
