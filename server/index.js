@@ -306,71 +306,71 @@ const fallbackSentences = [
     _id: 's1',
     frisian: 'Hoe giet it mei dy?',
     dutch: 'Hoe gaat het met jou?',
-    pronunciation: 'Hoe gjit ut maai dij?',
-    audioUrl: null
+    pronunciation: 'Hoe gjit \'t maai dij?',
+    audioUrl: 'hoe-giet-it-mei-dy.mp3'
   },
   {
     _id: 's2',
     frisian: 'Goeiemoarn',
     dutch: 'Goedemorgen!',
     pronunciation: 'Goeiemowen (rijmt ongeveer op Engelse \'Owen\' en begint met een harde \'g\')',
-    audioUrl: null
+    audioUrl: 'goeiemoarn.mp3'
   },
   {
     _id: 's3',
     frisian: 'Oant sjen!',
     dutch: 'Tot ziens!',
     pronunciation: 'Owent sjen',
-    audioUrl: null
+    audioUrl: 'oant-sjen.mp3'
   },
   {
     _id: 's4',
     frisian: 'Ik fyn dy leuk.',
     dutch: 'Ik vind je leuk.',
     pronunciation: 'ik fien die leuk',
-    audioUrl: null
+    audioUrl: 'ik-fyn-dy-leuk.mp3'
   },
   {
     _id: 's5',
     frisian: 'Danke wol!',
     dutch: 'Dank je wel!',
     pronunciation: 'Danke wol',
-    audioUrl: null
+    audioUrl: 'danke-wol.mp3'
   },
   {
     _id: 's6',
     frisian: 'Wolkom yn Fryslân!',
     dutch: 'Welkom in Friesland!',
     pronunciation: 'Wolkom yn Frieslowen (rijmt ongeveer op Engelse \'Owen\')',
-    audioUrl: null
+    audioUrl: 'wolkom-yn-fryslân.mp3'
   },
   {
     _id: 's7',
     frisian: 'Hoe hiesto?',
     dutch: 'Hoe heet jij?',
     pronunciation: 'Hoe hiesto?',
-    audioUrl: null
+    audioUrl: 'hoe-hiesto.mp3'
   },
   {
     _id: 's8',
     frisian: 'Ik bin Heleen.',
     dutch: 'Ik ben Heleen.',
     pronunciation: 'ik bin Heleen',
-    audioUrl: null
+    audioUrl: 'ik-bin-heleen.mp3'
   },
   {
     _id: 's9',
     frisian: 'Wêr wennesto?',
     dutch: 'Waar woon je?',
     pronunciation: 'Wèèr wennesto?',
-    audioUrl: null
+    audioUrl: 'wêr-wennesto.mp3'
   },
   {
     _id: 's10',
     frisian: 'Moai waar hjoed!',
     dutch: 'Mooi weer vandaag!',
     pronunciation: 'Mooi waar jóé-\'t',
-    audioUrl: null
+    audioUrl: 'moai-waar-hjoed.mp3'
   }
 ]
 

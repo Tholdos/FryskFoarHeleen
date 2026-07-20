@@ -50,36 +50,71 @@ export const useSentenceStore = defineStore('sentence', () => {
         _id: 's1',
         frisian: 'Hoe giet it mei dy?',
         dutch: 'Hoe gaat het met jou?',
-        pronunciation: 'hoo-geet-it-may-die',
-        audioUrl: null
+        pronunciation: 'Hoe gjit \'t maai dij?',
+        audioUrl: 'hoe-giet-it-mei-dy.mp3'
       },
       {
         _id: 's2',
-        frisian: 'Goeie moarn!',
+        frisian: 'Goeiemoarn',
         dutch: 'Goedemorgen!',
-        pronunciation: 'goo-ye-moarn',
-        audioUrl: null
+        pronunciation: 'Goeiemowen (rijmt ongeveer op Engelse \'Owen\' en begint met een harde \'g\')',
+        audioUrl: 'goeiemoarn.mp3'
       },
       {
         _id: 's3',
         frisian: 'Oant sjen!',
         dutch: 'Tot ziens!',
-        pronunciation: 'oant-sjen',
-        audioUrl: null
+        pronunciation: 'Owent sjen',
+        audioUrl: 'oant-sjen.mp3'
       },
       {
         _id: 's4',
-        frisian: 'Ik hâld fan dy.',
-        dutch: 'Ik hou van jou.',
-        pronunciation: 'ik-hold-fan-die',
-        audioUrl: null
+        frisian: 'Ik fyn dy leuk.',
+        dutch: 'Ik vind je leuk.',
+        pronunciation: 'ik fien die leuk',
+        audioUrl: 'ik-fyn-dy-leuk.mp3'
       },
       {
         _id: 's5',
-        frisian: 'Dankewol!',
-        dutch: 'Dankjewel!',
-        pronunciation: 'danke-wol',
-        audioUrl: null
+        frisian: 'Danke wol!',
+        dutch: 'Dank je wel!',
+        pronunciation: 'Danke wol',
+        audioUrl: 'danke-wol.mp3'
+      },
+      {
+        _id: 's6',
+        frisian: 'Wolkom yn Fryslân!',
+        dutch: 'Welkom in Friesland!',
+        pronunciation: 'Wolkom yn Frieslowen (rijmt ongeveer op Engelse \'Owen\')',
+        audioUrl: 'wolkom-yn-fryslân.mp3'
+      },
+      {
+        _id: 's7',
+        frisian: 'Hoe hiesto?',
+        dutch: 'Hoe heet jij?',
+        pronunciation: 'Hoe hiesto?',
+        audioUrl: 'hoe-hiesto.mp3'
+      },
+      {
+        _id: 's8',
+        frisian: 'Ik bin Heleen.',
+        dutch: 'Ik ben Heleen.',
+        pronunciation: 'ik bin Heleen',
+        audioUrl: 'ik-bin-heleen.mp3'
+      },
+      {
+        _id: 's9',
+        frisian: 'Wêr wennesto?',
+        dutch: 'Waar woon je?',
+        pronunciation: 'Wèèr wennesto?',
+        audioUrl: 'wêr-wennesto.mp3'
+      },
+      {
+        _id: 's10',
+        frisian: 'Moai waar hjoed!',
+        dutch: 'Mooi weer vandaag!',
+        pronunciation: 'Mooi waar jóé-\'t',
+        audioUrl: 'moai-waar-hjoed.mp3'
       }
     ]
     currentSentence.value = getRandomSentence.value
