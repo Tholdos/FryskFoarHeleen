@@ -122,6 +122,7 @@ onMounted(async () => {
   max-width: 900px;
   margin: 0 auto;
   padding: 2rem;
+  width: 100%;
 }
 
 .game-selector {
@@ -132,6 +133,16 @@ onMounted(async () => {
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
   padding: 0.5rem 0;
+  margin-left: -2rem;
+  margin-right: -2rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.game-selector::-webkit-scrollbar {
+  display: none;
 }
 
 .game-selector button {
@@ -195,18 +206,31 @@ onMounted(async () => {
     font-size: 1.8rem;
   }
 
+  .app-header {
+    padding: 2rem 1rem;
+  }
+
   .app-main {
     padding: 1rem;
+    max-width: 100%;
   }
 
   .game-selector {
     justify-content: flex-start;
     margin-bottom: 1.5rem;
+    margin-left: -1rem;
+    margin-right: -1rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
   }
 
   .game-selector button {
     padding: 0.6rem 1rem;
     font-size: 0.9rem;
+  }
+
+  .game-container {
+    min-height: 300px;
   }
 }
 </style>

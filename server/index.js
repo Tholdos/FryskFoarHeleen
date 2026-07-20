@@ -458,8 +458,8 @@ const fallbackSounds = [
   {
     _id: 'snd4',
     combination: 'oa',
-    pronunciation: 'óówùh (zoals in Engels "Owen", zie ook "â")',
-    example: 'boat (boot)',
+    pronunciation: 'óówùh (zoals in Engels "Owen", zie ook "â"), of wha (zoals in Engels "what")',
+    example: 'boat (boot) of foar (voor)',
     audioUrl: null
   },
   {
@@ -473,7 +473,7 @@ const fallbackSounds = [
     _id: 'snd6',
     combination: 'ei',
     pronunciation: 'Tussen "aai" en "òòi" (zie ook "aai") of ei (zoals in NL "ei")',
-    example: 'heit (vader)',
+    example: 'heit (vader) of rein (regen)',
     audioUrl: null
   },
   {
@@ -487,7 +487,7 @@ const fallbackSounds = [
     _id: 'snd8',
     combination: 'û',
     pronunciation: 'oeh (langgerekt, zoals in "boeeeh!" of kort zoals in "boek"',
-    example: 'hûs (huis)',
+    example: 'hûs (huis) of bûten (buiten)',
     audioUrl: null
   },
   {
@@ -507,7 +507,7 @@ const fallbackSounds = [
   {
     _id: 'snd11',
     combination: 'ê',
-    pronunciation: 'èè (zoals in "bèèh" van een schaap)',
+    pronunciation: 'èè (zoals in "bèèh", van een schaap)',
     example: 'hê (hooien)',
     audioUrl: null
   },
