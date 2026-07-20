@@ -72,28 +72,28 @@ const fallbackWords = [
     frisian: 'mem',
     dutch: 'moeder',
     pronunciation: 'mem',
-    audioUrl: null
+    audioUrl: 'mem.mp3'
   },
   {
     _id: '2',
     frisian: 'heit',
     dutch: 'vader',
     pronunciation: 'ergens tussen "haait" en "hòòit"',
-    audioUrl: null
+    audioUrl: 'heit.mp3'
   },
   {
     _id: '3',
     frisian: 'beppe',
     dutch: 'oma',
     pronunciation: 'beppe',
-    audioUrl: null
+    audioUrl: 'beppe.mp3'
   },
   {
     _id: '4',
     frisian: 'pake',
     dutch: 'opa',
     pronunciation: 'pake',
-    audioUrl: null
+    audioUrl: 'pake.mp3'
   },
   {
     _id: '5',
@@ -170,134 +170,190 @@ const fallbackWords = [
     frisian: 'dei',
     dutch: 'dag',
     pronunciation: 'ergens tussen "daai" en "dòòi"',
-    audioUrl: null
+    audioUrl: 'dei.mp3'
   },
   {
     _id: '16',
     frisian: 'nacht',
     dutch: 'nacht',
     pronunciation: 'nacht',
-    audioUrl: null
+    audioUrl: 'nacht.mp3'
   },
   {
     _id: '17',
     frisian: 'swart',
     dutch: 'zwart',
     pronunciation: 'swat',
-    audioUrl: null
+    audioUrl: 'swart.mp3'
   },
   {
     _id: '18',
     frisian: 'wyt',
     dutch: 'wit',
     pronunciation: 'wiet',
-    audioUrl: null
+    audioUrl: 'wyt.mp3'
   },
   {
     _id: '19',
     frisian: 'sinne',
     dutch: 'zon',
     pronunciation: 'sinne',
-    audioUrl: null
+    audioUrl: 'sinne.mp3'
   },
   {
     _id: '20',
     frisian: 'moanne',
     dutch: 'maan',
     pronunciation: 'mwanne',
-    audioUrl: null
+    audioUrl: 'moanne.mp3'
   },
   {
     _id: '21',
     frisian: 'lang',
     dutch: 'lang',
     pronunciation: 'lang',
-    audioUrl: null
+    audioUrl: 'lang.mp3'
   },
   {
     _id: '22',
     frisian: 'koart',
     dutch: 'kort',
     pronunciation: 'kwat',
-    audioUrl: null
+    audioUrl: 'koart.mp3'
   },
   {
     _id: '23',
     frisian: 'hûn',
     dutch: 'hond',
     pronunciation: 'hoen',
-    audioUrl: null
+    audioUrl: 'hûn.mp3'
   },
   {
     _id: '24',
     frisian: 'kat',
     dutch: 'kat',
     pronunciation: 'kot',
-    audioUrl: null
+    audioUrl: 'kat.mp3'
   },
   {
     _id: '25',
     frisian: 'giel',
     dutch: 'geel',
     pronunciation: 'geel met een harde g-klank, zoals in het Engelse "go" (officieel met een ieje-klank, maar dat doet bijna niemand)',
-    audioUrl: null
+    audioUrl: 'giel.mp3'
   },
   {
     _id: '26',
     frisian: 'grien',
     dutch: 'groen',
     pronunciation: 'rijmt op "Ian", met een harde g-klank, zoals in het Engelse "go"',
-    audioUrl: null
+    audioUrl: 'grien.mp3'
   },
   {
     _id: '27',
     frisian: 'read',
     dutch: 'rood',
     pronunciation: 'ree-ut (een e-klank die overgaat in een uh-klank)',
-    audioUrl: null
+    audioUrl: 'read.mp3'
   },
   {
     _id: '28',
     frisian: 'blau',
     dutch: 'blauw',
     pronunciation: 'blauw',
-    audioUrl: null
+    audioUrl: 'blau.mp3'
   },
   {
     _id: '29',
     frisian: 'bôle',
     dutch: 'brood',
     pronunciation: 'bòòle (met een lange òòh-klank)',
-    audioUrl: null
+    audioUrl: 'bôle.mp3'
   },
   {
     _id: '30',
     frisian: 'bûter',
     dutch: 'boter',
     pronunciation: 'boeter',
-    audioUrl: null
+    audioUrl: 'bûter.mp3'
   },
   {
     _id: '31',
     frisian: 'tsiis',
     dutch: 'kaas',
     pronunciation: 'tsiis met een lange "i" zoals in het Engelse "see"',
-    audioUrl: null
+    audioUrl: 'tsiis.mp3'
   },
   {
     _id: '32',
     frisian: 'iis',
     dutch: 'ijs',
     pronunciation: 'iis met een lange "i" zoals in het Engelse "see"',
-    audioUrl: null
+    audioUrl: 'iis.mp3'
   },
   {
     _id: '33',
     frisian: 'wetter',
     dutch: 'water',
     pronunciation: 'wetter',
-    audioUrl: null
-  }
+    audioUrl: 'wetter.mp3'
+  },
+  {
+    _id: '34',
+    frisian: 'ik',
+    dutch: 'ik',
+    pronunciation: 'ik',
+    audioUrl: 'ik.mp3'
+  },
+  {
+    _id: '35',
+    frisian: 'do',
+    dutch: 'jij',
+    pronunciation: 'do',
+    audioUrl: 'do.mp3'
+  },
+  {
+    _id: '36',
+    frisian: 'hy',
+    dutch: 'hij',
+    pronunciation: 'hij',
+    audioUrl: 'hy.mp3'
+  },
+  {
+    _id: '37',
+    frisian: 'sy',
+    dutch: 'zij',
+    pronunciation: 'sij',
+    audioUrl: 'sy.mp3'
+  },
+  {
+    _id: '38',
+    frisian: 'wy',
+    dutch: 'wij',
+    pronunciation: 'wij',
+    audioUrl: 'wy.mp3'
+  },
+  {
+    _id: '39',
+    frisian: 'jim',
+    dutch: 'jullie',
+    pronunciation: 'jim',
+    audioUrl: 'jim.mp3'
+  },
+  {
+    _id: '40',
+    frisian: 'it',
+    dutch: 'het',
+    pronunciation: 'ut (zeg maar zoals het Nederlandse \'t)',
+    audioUrl: 'it.mp3'
+  },
+  {
+    _id: '41',
+    frisian: 'tút',
+    dutch: 'kus',
+    pronunciation: 'tuut (rijmt op NL \'buut\')',
+    audioUrl: 'tút.mp3'
+  },
 ]
 
 // Fallback sentences for development/testing
