@@ -305,20 +305,20 @@ function checkMatch() {
   }
 
   .game-board {
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.5rem;
     max-width: 100%;
   }
 
   .column h3 {
-    font-size: 1.1rem;
-    margin-bottom: 0.5rem;
+    font-size: 0.95rem;
+    margin-bottom: 0.4rem;
   }
 
   .word-card {
-    padding: 0.7rem 1rem;
-    margin-bottom: 0.5rem;
-    font-size: 1rem;
+    padding: 0.6rem 0.4rem;
+    margin-bottom: 0.4rem;
+    font-size: 0.9rem;
   }
 
   .word-card:hover {
