@@ -2,72 +2,72 @@
   {
     "combination": "aai",
     "pronunciation": "Tussen \"aai\" en \"òòi\"",
-    "example": "paai (paal)",
+    "example": "kaai (sleutel)",
     "audioUrl": null
   },
   {
     "combination": "ie",
     "pronunciation": "ieje (zoals het begin van de naam \"Ian\")",
-    "example": "bier, hier",
+    "example": "wiet (nat)",
     "audioUrl": null
   },
   {
     "combination": "ea",
-    "pronunciation": "èèa (twee klanken na elkaar)",
-    "example": "sead (zaad)",
+    "pronunciation": "eejuh (zoals in Engels \"player\")",
+    "example": "read (rood)",
     "audioUrl": null
   },
   {
     "combination": "oa",
-    "pronunciation": "òòa (twee klanken na elkaar)",
+    "pronunciation": "óówùh (zoals in Engels \"Owen\", zie ook \"â\")",
     "example": "boat (boot)",
     "audioUrl": null
   },
   {
     "combination": "oe",
-    "pronunciation": "oewuh (zoals in Nederlands \"koek\")",
-    "example": "boek",
+    "pronunciation": "oewuh (zoals in Nederlands \"boer\")",
+    "example": "goed (goed)",
     "audioUrl": null
   },
   {
-    "combination": "ij",
-    "pronunciation": "ei (zoals in Nederlands \"wijn\")",
-    "example": "wijn",
-    "audioUrl": null
-  },
-  {
-    "combination": "âu",
-    "pronunciation": "òòuw (lange oo gevolgd door w)",
-    "example": "blâu (blauw)",
-    "audioUrl": null
-  },
-  {
-    "combination": "û",
-    "pronunciation": "uu met een zachte u (zoals in \"put\")",
-    "example": "hûs (huis), bûter (boter)",
-    "audioUrl": null
-  },
-  {
-    "combination": "â",
-    "pronunciation": "òò (lange o)",
-    "example": "wâl (wal)",
+    "combination": "ei",
+    "pronunciation": "Tussen \"aai\" en \"òòi\" (zie ook \"aai\") of ei (zoals in NL \"ei\")",
+    "example": "heit (vader)",
     "audioUrl": null
   },
   {
     "combination": "ô",
-    "pronunciation": "òò (lange o)",
+    "pronunciation": "òòh (zoals in NL \"òòh!\", zie ook \"â\")",
+    "example": "bôle (brood)",
+    "audioUrl": null
+  },
+  {
+    "combination": "û",
+    "pronunciation": "oeh (langgerekt, zoals in \"boeeeh!\" of kort zoals in \"boek\"",
+    "example": "hûs (huis)",
+    "audioUrl": null
+  },
+  {
+    "combination": "â",
+    "pronunciation": "òòh (zoals in NL \"òòh!\", zie ook \"ô\") of óówùh (zoals in Engels \"Owen\", zie ook \"oa\")",
+    "example": "wâl (wal) of lân (land)",
+    "audioUrl": null
+  },
+  {
+    "combination": "ô",
+    "pronunciation": "òò (zoals in NL \"òòh!\")",
     "example": "bôle (brood)",
     "audioUrl": null
   },
   {
     "combination": "ê",
-    "pronunciation": "èè (lange e)",
+    "pronunciation": "èè (zoals in \"bèèh\" van een schaap)",
     "example": "hê (hooien)",
     "audioUrl": null
   },
   {
     "combination": "y",
-    "pronunciation": "i (zoals in Engels \"see\")",
+    "pronunciation": "ie (zoals in NL \"zien\")",
     "example": "wyn (wind)",
     "audioUrl": null
   }
