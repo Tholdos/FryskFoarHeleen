@@ -306,70 +306,70 @@ const fallbackSentences = [
     _id: 's1',
     frisian: 'Hoe giet it mei dy?',
     dutch: 'Hoe gaat het met jou?',
-    pronunciation: 'hoo-geet-it-may-die',
+    pronunciation: 'Hoe gjit ut maai dij?',
     audioUrl: null
   },
   {
     _id: 's2',
-    frisian: 'Goeie moarn!',
+    frisian: 'Goeiemoarn',
     dutch: 'Goedemorgen!',
-    pronunciation: 'goo-ye-moarn',
+    pronunciation: 'Goeiemowen (rijmt ongeveer op Engelse \'Owen\' en begint met een harde \'g\')',
     audioUrl: null
   },
   {
     _id: 's3',
     frisian: 'Oant sjen!',
     dutch: 'Tot ziens!',
-    pronunciation: 'oant-sjen',
+    pronunciation: 'Owent sjen',
     audioUrl: null
   },
   {
     _id: 's4',
-    frisian: 'Ik hâld fan dy.',
-    dutch: 'Ik hou van jou.',
-    pronunciation: 'ik-hold-fan-die',
+    frisian: 'Ik fyn dy leuk.',
+    dutch: 'Ik vind je leuk.',
+    pronunciation: 'ik fien die leuk',
     audioUrl: null
   },
   {
     _id: 's5',
-    frisian: 'Dankewol!',
-    dutch: 'Dankjewel!',
-    pronunciation: 'danke-wol',
+    frisian: 'Danke wol!',
+    dutch: 'Dank je wel!',
+    pronunciation: 'Danke wol',
     audioUrl: null
   },
   {
     _id: 's6',
     frisian: 'Wolkom yn Fryslân!',
     dutch: 'Welkom in Friesland!',
-    pronunciation: 'wol-kom-in-fries-lon',
+    pronunciation: 'Wolkom yn Frieslowen (rijmt ongeveer op Engelse \'Owen\')',
     audioUrl: null
   },
   {
     _id: 's7',
-    frisian: 'Wat is dyn namme?',
-    dutch: 'Wat is jouw naam?',
-    pronunciation: 'wat-is-din-namme',
+    frisian: 'Hoe hiesto?',
+    dutch: 'Hoe heet jij?',
+    pronunciation: 'Hoe hiesto?',
     audioUrl: null
   },
   {
     _id: 's8',
     frisian: 'Ik bin Heleen.',
     dutch: 'Ik ben Heleen.',
-    pronunciation: 'ik-bin-he-leen',
+    pronunciation: 'ik bin Heleen',
     audioUrl: null
   },
   {
     _id: 's9',
-    frisian: 'Moai waar hjoed!',
-    dutch: 'Mooi weer vandaag!',
-    pronunciation: 'moai-waar-hjoet',
+    frisian: 'Wêr wennesto?',
+    dutch: 'Waar woon je?',
+    pronunciation: 'Wèèr wennesto?',
     audioUrl: null
   },
   {
     _id: 's10',
-    frisian: 'It is kâld bûten.',
-    dutch: 'Het is koud buiten.',
-    pronunciation: 'it-is-kold-buten',
+    frisian: 'Moai waar hjoed!',
+    dutch: 'Mooi weer vandaag!',
+    pronunciation: 'Mooi waar jóé-\'t',
     audioUrl: null
   }
 ]
