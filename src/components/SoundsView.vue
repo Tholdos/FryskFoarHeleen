@@ -1,8 +1,7 @@
 <template>
   <div class="sounds-container">
     <div class="sounds-header">
-      <h2>Friese Klankcombinaasjes</h2>
-      <p class="subtitle">Leer hoe letters in het Fries worden uitgesproken</p>
+      <h2>Friese klinkers en klinkercombinaties</h2>
     </div>
 
     <div v-if="loading" class="loading">

@@ -8,7 +8,7 @@ Complete instructies voor het opzetten van je MongoDB database voor Frysk Foar H
 ### Collections:
 - `words` - Individuele woorden
 - `sentences` - Hele zinnen
-- `sounds` - Klankcombinaasjes en uitspraak
+- `sounds` - Klinkercombinaties en uitspraak
 
 ## 📝 Schemas
 
