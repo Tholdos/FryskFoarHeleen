@@ -508,7 +508,7 @@ const fallbackSounds = [
     _id: 'snd11',
     combination: 'ê',
     pronunciation: 'èè (zoals in "bèèh", van een schaap)',
-    example: 'hê (hooien)',
+    example: 'bêd (bed)',
     audioUrl: 'ê.mp3'
   },
   {
