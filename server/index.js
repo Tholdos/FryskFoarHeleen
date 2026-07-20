@@ -37,6 +37,7 @@ const MONGODB_URI = process.env.MONGODB_URI
 let db = null
 let wordsCollection = null
 let sentencesCollection = null
+let soundsCollection = null
 
 // Connect to MongoDB
 async function connectDB() {
@@ -51,6 +52,7 @@ async function connectDB() {
     db = client.db('frysk_app')
     wordsCollection = db.collection('words')
     sentencesCollection = db.collection('sentences')
+    soundsCollection = db.collection('sounds')
     console.log('✅ Connected to MongoDB')
     return true
   } catch (error) {
@@ -430,6 +432,94 @@ const fallbackSentences = [
   }
 ]
 
+// Fallback sounds for development/testing
+const fallbackSounds = [
+  {
+    _id: 'snd1',
+    combination: 'aai',
+    pronunciation: 'Tussen "aai" en "òòi"',
+    example: 'paai (paal)',
+    audioUrl: null
+  },
+  {
+    _id: 'snd2',
+    combination: 'ie',
+    pronunciation: 'ieje (zoals het begin van de naam "Ian")',
+    example: 'bier, hier',
+    audioUrl: null
+  },
+  {
+    _id: 'snd3',
+    combination: 'ea',
+    pronunciation: 'èèa (twee klanken na elkaar)',
+    example: 'sead (zaad)',
+    audioUrl: null
+  },
+  {
+    _id: 'snd4',
+    combination: 'oa',
+    pronunciation: 'òòa (twee klanken na elkaar)',
+    example: 'boat (boot)',
+    audioUrl: null
+  },
+  {
+    _id: 'snd5',
+    combination: 'oe',
+    pronunciation: 'oewuh (zoals in Nederlands "koek")',
+    example: 'boek',
+    audioUrl: null
+  },
+  {
+    _id: 'snd6',
+    combination: 'ij',
+    pronunciation: 'ei (zoals in Nederlands "wijn")',
+    example: 'wijn',
+    audioUrl: null
+  },
+  {
+    _id: 'snd7',
+    combination: 'âu',
+    pronunciation: 'òòuw (lange oo gevolgd door w)',
+    example: 'blâu (blauw)',
+    audioUrl: null
+  },
+  {
+    _id: 'snd8',
+    combination: 'û',
+    pronunciation: 'uu met een zachte u (zoals in "put")',
+    example: 'hûs (huis), bûter (boter)',
+    audioUrl: null
+  },
+  {
+    _id: 'snd9',
+    combination: 'â',
+    pronunciation: 'òò (lange o)',
+    example: 'wâl (wal)',
+    audioUrl: null
+  },
+  {
+    _id: 'snd10',
+    combination: 'ô',
+    pronunciation: 'òò (lange o)',
+    example: 'bôle (brood)',
+    audioUrl: null
+  },
+  {
+    _id: 'snd11',
+    combination: 'ê',
+    pronunciation: 'èè (lange e)',
+    example: 'hê (hooien)',
+    audioUrl: null
+  },
+  {
+    _id: 'snd12',
+    combination: 'y',
+    pronunciation: 'i (zoals in Engels "see")',
+    example: 'wyn (wind)',
+    audioUrl: null
+  }
+]
+
 // Routes
 
 // Health check
@@ -642,6 +732,29 @@ app.post('/api/sentences', async (req, res) => {
   } catch (error) {
     console.error('Error adding sentence:', error)
     res.status(500).json({ error: 'Failed to add sentence' })
+  }
+})
+
+// ===== SOUNDS ENDPOINTS =====
+
+// Get all sounds
+app.get('/api/sounds', async (req, res) => {
+  try {
+    if (dbConnected && soundsCollection) {
+      const sounds = await soundsCollection.find({}).toArray()
+      // If MongoDB is empty, use fallback data
+      if (sounds.length === 0) {
+        res.json(fallbackSounds)
+      } else {
+        res.json(sounds)
+      }
+    } else {
+      // Use fallback data
+      res.json(fallbackSounds)
+    }
+  } catch (error) {
+    console.error('Error fetching sounds:', error)
+    res.status(500).json({ error: 'Failed to fetch sounds' })
   }
 })
 

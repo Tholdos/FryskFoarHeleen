@@ -19,6 +19,12 @@
           Zinnen
         </button>
         <button 
+          @click="currentGame = 'klanken'" 
+          :class="{ active: currentGame === 'klanken' }"
+        >
+          Klanken
+        </button>
+        <button 
           @click="currentGame = 'matching'" 
           :class="{ active: currentGame === 'matching' }"
         >
@@ -35,6 +41,7 @@
       <div class="game-container">
         <FlashCard v-if="currentGame === 'flashcard'" />
         <SentencesFlashCard v-else-if="currentGame === 'zinnen'" />
+        <SoundsView v-else-if="currentGame === 'klanken'" />
         <MatchingGame v-else-if="currentGame === 'matching'" />
         <TypingGame v-else-if="currentGame === 'typing'" />
       </div>
@@ -56,6 +63,7 @@ import { useWordStore } from './stores/wordStore'
 import { useSentenceStore } from './stores/sentenceStore'
 import FlashCard from './components/FlashCard.vue'
 import SentencesFlashCard from './components/SentencesFlashCard.vue'
+import SoundsView from './components/SoundsView.vue'
 import MatchingGame from './components/MatchingGame.vue'
 import TypingGame from './components/TypingGame.vue'
 
