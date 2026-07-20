@@ -278,9 +278,56 @@ function checkMatch() {
 }
 
 @media (max-width: 768px) {
+  .matching-game {
+    gap: 1rem;
+  }
+
+  .game-header h2 {
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .start-screen,
+  .complete-screen {
+    padding: 1.5rem 1rem;
+  }
+
+  .start-screen p,
+  .complete-screen p {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .btn-start,
+  .btn-restart {
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+  }
+
   .game-board {
     grid-template-columns: 1fr;
-    gap: 2rem;
+    gap: 1.5rem;
+    max-width: 100%;
+  }
+
+  .column h3 {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .word-card {
+    padding: 0.7rem 1rem;
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+  }
+
+  .word-card:hover {
+    transform: translateX(2px);
+  }
+
+  .feedback {
+    padding: 1rem 2rem;
+    font-size: 1.2rem;
   }
 }
 </style>

@@ -129,6 +129,9 @@ onMounted(async () => {
   gap: 1rem;
   justify-content: center;
   margin-bottom: 2rem;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  padding: 0.5rem 0;
 }
 
 .game-selector button {
@@ -141,6 +144,8 @@ onMounted(async () => {
   cursor: pointer;
   transition: all 0.3s ease;
   font-weight: 500;
+  white-space: nowrap;
+  flex-shrink: 0;
 }
 
 .game-selector button:hover {
@@ -182,5 +187,26 @@ onMounted(async () => {
   vertical-align: middle;
   display: inline-block;
   margin: 0 0.2em;
+}
+
+/* Mobile optimizations */
+@media (max-width: 768px) {
+  .app-header h1 {
+    font-size: 1.8rem;
+  }
+
+  .app-main {
+    padding: 1rem;
+  }
+
+  .game-selector {
+    justify-content: flex-start;
+    margin-bottom: 1.5rem;
+  }
+
+  .game-selector button {
+    padding: 0.6rem 1rem;
+    font-size: 0.9rem;
+  }
 }
 </style>
