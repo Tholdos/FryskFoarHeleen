@@ -438,27 +438,27 @@ const fallbackSounds = [
     _id: 'snd1',
     combination: 'aai',
     pronunciation: 'Tussen "aai" en "òòi"',
-    example: 'paai (paal)',
+    example: 'kaai (sleutel)',
     audioUrl: null
   },
   {
     _id: 'snd2',
     combination: 'ie',
     pronunciation: 'ieje (zoals het begin van de naam "Ian")',
-    example: 'bier, hier',
+    example: 'wiet (nat)',
     audioUrl: null
   },
   {
     _id: 'snd3',
     combination: 'ea',
-    pronunciation: 'èèa (twee klanken na elkaar)',
-    example: 'sead (zaad)',
+    pronunciation: 'eejuh (zoals in Engels "player")',
+    example: 'read (rood)',
     audioUrl: null
   },
   {
     _id: 'snd4',
     combination: 'oa',
-    pronunciation: 'òòa (twee klanken na elkaar)',
+    pronunciation: 'óówùh (zoals in Engels "Owen", zie ook "â")',
     example: 'boat (boot)',
     audioUrl: null
   },
@@ -466,55 +466,55 @@ const fallbackSounds = [
     _id: 'snd5',
     combination: 'oe',
     pronunciation: 'oewuh (zoals in Nederlands "boer")',
-    example: 'boek',
+    example: 'goed (goed)',
     audioUrl: null
   },
   {
     _id: 'snd6',
-    combination: 'ij',
-    pronunciation: 'ei (zoals in NL "wijn")',
-    example: 'wijn',
+    combination: 'ei',
+    pronunciation: 'Tussen "aai" en "òòi" (zie ook "aai") of ei (zoals in NL "ei")',
+    example: 'heit (vader)',
     audioUrl: null
   },
   {
     _id: 'snd7',
     combination: 'ô',
-    pronunciation: 'òòh',
-    example: 'blâu (blauw)',
+    pronunciation: 'òòh (zoals in NL "òòh!", zie ook "â")',
+    example: 'bôle (brood)',
     audioUrl: null
   },
   {
     _id: 'snd8',
     combination: 'û',
-    pronunciation: 'uu met een zachte u (zoals in "put")',
-    example: 'hûs (huis), bûter (boter)',
+    pronunciation: 'oeh (langgerekt, zoals in "boeeeh!" of kort zoals in "boek"',
+    example: 'hûs (huis)',
     audioUrl: null
   },
   {
     _id: 'snd9',
     combination: 'â',
-    pronunciation: 'òò (lange o)',
-    example: 'wâl (wal)',
+    pronunciation: 'òòh (zoals in NL "òòh!", zie ook "ô") of óówùh (zoals in Engels "Owen", zie ook "oa")',
+    example: 'wâl (wal) of lân (land)',
     audioUrl: null
   },
   {
     _id: 'snd10',
     combination: 'ô',
-    pronunciation: 'òò (lange o)',
+    pronunciation: 'òò (zoals in NL "òòh!")',
     example: 'bôle (brood)',
     audioUrl: null
   },
   {
     _id: 'snd11',
     combination: 'ê',
-    pronunciation: 'èè (lange e)',
+    pronunciation: 'èè (zoals in "bèèh" van een schaap)',
     example: 'hê (hooien)',
     audioUrl: null
   },
   {
     _id: 'snd12',
     combination: 'y',
-    pronunciation: 'i (zoals in Engels "see")',
+    pronunciation: 'ie (zoals in NL "zien")',
     example: 'wyn (wind)',
     audioUrl: null
   }

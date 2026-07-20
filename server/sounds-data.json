@@ -1,71 +1,83 @@
 [
   {
+    "_id": "snd1",
     "combination": "aai",
     "pronunciation": "Tussen \"aai\" en \"òòi\"",
     "example": "kaai (sleutel)",
     "audioUrl": null
   },
   {
+    "_id": "snd2",
     "combination": "ie",
     "pronunciation": "ieje (zoals het begin van de naam \"Ian\")",
     "example": "wiet (nat)",
     "audioUrl": null
   },
   {
+    "_id": "snd3",
     "combination": "ea",
     "pronunciation": "eejuh (zoals in Engels \"player\")",
     "example": "read (rood)",
     "audioUrl": null
   },
   {
+    "_id": "snd4",
     "combination": "oa",
     "pronunciation": "óówùh (zoals in Engels \"Owen\", zie ook \"â\")",
     "example": "boat (boot)",
     "audioUrl": null
   },
   {
+    "_id": "snd5",
     "combination": "oe",
     "pronunciation": "oewuh (zoals in Nederlands \"boer\")",
     "example": "goed (goed)",
     "audioUrl": null
   },
   {
+    "_id": "snd6",
     "combination": "ei",
     "pronunciation": "Tussen \"aai\" en \"òòi\" (zie ook \"aai\") of ei (zoals in NL \"ei\")",
     "example": "heit (vader)",
     "audioUrl": null
   },
   {
+    "_id": "snd7",
     "combination": "ô",
     "pronunciation": "òòh (zoals in NL \"òòh!\", zie ook \"â\")",
     "example": "bôle (brood)",
     "audioUrl": null
   },
   {
+    "_id": "snd8",
     "combination": "û",
     "pronunciation": "oeh (langgerekt, zoals in \"boeeeh!\" of kort zoals in \"boek\"",
     "example": "hûs (huis)",
     "audioUrl": null
   },
   {
+    "_id": "snd9",
     "combination": "â",
     "pronunciation": "òòh (zoals in NL \"òòh!\", zie ook \"ô\") of óówùh (zoals in Engels \"Owen\", zie ook \"oa\")",
     "example": "wâl (wal) of lân (land)",
     "audioUrl": null
   },
   {
+    "_id": "snd10",
     "combination": "ô",
     "pronunciation": "òò (zoals in NL \"òòh!\")",
     "example": "bôle (brood)",
     "audioUrl": null
   },
   {
+    "_id": "snd11",
     "combination": "ê",
     "pronunciation": "èè (zoals in \"bèèh\" van een schaap)",
     "example": "hê (hooien)",
     "audioUrl": null
   },
   {
+    "_id": "snd12",
     "combination": "y",
     "pronunciation": "ie (zoals in NL \"zien\")",
     "example": "wyn (wind)",
