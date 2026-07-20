@@ -3,6 +3,7 @@ require('dotenv').config()
 
 const wordsData = require('./words-data.json')
 const sentencesData = require('./sentences-data.json')
+const soundsData = require('./sounds-data.json')
 
 const MONGODB_URI = process.env.MONGODB_URI
 
@@ -55,9 +56,22 @@ async function seedDatabase() {
       console.log(`✅ Inserted ${sentencesData.length} sentences`)
     }
     
+    // Seed Sounds
+    const soundsCollection = db.collection('sounds')
+    const existingSoundsCount = await soundsCollection.countDocuments()
+    
+    if (existingSoundsCount > 0) {
+      console.log(`⚠️  Sounds collection already has ${existingSoundsCount} documents`)
+      console.log('Skipping sounds import...')
+      console.log('To clear and reimport: npm run seed:clear')
+    } else {
+      await soundsCollection.insertMany(soundsData)
+      console.log(`✅ Inserted ${soundsData.length} sounds`)
+    }
+    
     console.log('')
     console.log('🎉 Database seeding completed!')
-    console.log(`📊 Total: ${wordsData.length} words, ${sentencesData.length} sentences`)
+    console.log(`📊 Total: ${wordsData.length} words, ${sentencesData.length} sentences, ${soundsData.length} sounds`)
     
   } catch (error) {
     console.error('❌ Error seeding database:', error)
@@ -97,6 +111,12 @@ async function clearAndSeed() {
     await sentencesCollection.deleteMany({})
     await sentencesCollection.insertMany(sentencesData)
     console.log(`✅ Cleared and inserted ${sentencesData.length} sentences`)
+    
+    // Clear and seed sounds
+    const soundsCollection = db.collection('sounds')
+    await soundsCollection.deleteMany({})
+    await soundsCollection.insertMany(soundsData)
+    console.log(`✅ Cleared and inserted ${soundsData.length} sounds`)
     
     console.log('')
     console.log('🎉 Database cleared and reseeded successfully!')

@@ -465,21 +465,21 @@ const fallbackSounds = [
   {
     _id: 'snd5',
     combination: 'oe',
-    pronunciation: 'oewuh (zoals in Nederlands "koek")',
+    pronunciation: 'oewuh (zoals in Nederlands "boer")',
     example: 'boek',
     audioUrl: null
   },
   {
     _id: 'snd6',
     combination: 'ij',
-    pronunciation: 'ei (zoals in Nederlands "wijn")',
+    pronunciation: 'ei (zoals in NL "wijn")',
     example: 'wijn',
     audioUrl: null
   },
   {
     _id: 'snd7',
-    combination: 'âu',
-    pronunciation: 'òòuw (lange oo gevolgd door w)',
+    combination: 'ô',
+    pronunciation: 'òòh',
     example: 'blâu (blauw)',
     audioUrl: null
   },

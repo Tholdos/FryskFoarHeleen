@@ -8,6 +8,7 @@ Complete instructies voor het opzetten van je MongoDB database voor Frysk Foar H
 ### Collections:
 - `words` - Individuele woorden
 - `sentences` - Hele zinnen
+- `sounds` - Klankcombinaasjes en uitspraak
 
 ## 📝 Schemas
 
@@ -34,6 +35,17 @@ Complete instructies voor het opzetten van je MongoDB database voor Frysk Foar H
   pronunciation: String,      // Uitspraak hulp
   audioUrl: String | null,    // Pad naar audio bestand
   createdAt: Date            // Aanmaak datum
+}
+```
+
+### Sounds Schema
+```javascript
+{
+  _id: ObjectId,              // Auto-generated
+  combination: String,        // Lettercombinaasje (verplicht)
+  pronunciation: String,      // Uitspraak uitleg (verplicht)
+  example: String,            // Voorbeeld woorden
+  audioUrl: String | null     // Pad naar audio bestand
 }
 ```
 
@@ -86,18 +98,19 @@ De makkelijkste manier om woorden en zinnen te importeren:
    Dit importeert automatisch:
    - Alle woorden uit `words-data.json`
    - Alle zinnen uit `sentences-data.json`
+   - Alle klanken uit `sounds-data.json`
 
 4. **Om bestaande data te vervangen**:
    ```bash
    npm run seed:clear
    ```
-   ⚠️ Dit verwijdert ALLE bestaande woorden en zinnen en importeert ze opnieuw!
+   ⚠️ Dit verwijdert ALLE bestaande woorden, zinnen en klanken en importeert ze opnieuw!
 
 ### Wat doet het seed script?
 - ✅ Controleert of collecties al data bevatten
 - ✅ Importeert alleen als collecties leeg zijn (safe)
 - ✅ Geeft duidelijke feedback over wat er gebeurt
-- ✅ Importeert zowel woorden als zinnen in één keer
+- ✅ Importeert woorden, zinnen en klanken in één keer
 
 ## 📊 Initiële Data (Handmatig)
 
@@ -426,6 +439,7 @@ db.words.createIndex({
 - [ ] Database `frysk_app` bestaat
 - [ ] Collection `words` bestaat
 - [ ] Collection `sentences` bestaat
+- [ ] Collection `sounds` bestaat
 - [ ] Data geïmporteerd met `npm run seed`
 - [ ] Backend kan verbinden
 - [ ] Indexes aangemaakt (optioneel)
