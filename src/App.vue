@@ -13,6 +13,12 @@
           Flashcards
         </button>
         <button 
+          @click="currentGame = 'zinnen'" 
+          :class="{ active: currentGame === 'zinnen' }"
+        >
+          Zinnen
+        </button>
+        <button 
           @click="currentGame = 'matching'" 
           :class="{ active: currentGame === 'matching' }"
         >
@@ -28,6 +34,7 @@
 
       <div class="game-container">
         <FlashCard v-if="currentGame === 'flashcard'" />
+        <SentencesFlashCard v-else-if="currentGame === 'zinnen'" />
         <MatchingGame v-else-if="currentGame === 'matching'" />
         <TypingGame v-else-if="currentGame === 'typing'" />
       </div>
@@ -46,20 +53,26 @@
 <script setup>
 import { ref, onMounted } from 'vue'
 import { useWordStore } from './stores/wordStore'
+import { useSentenceStore } from './stores/sentenceStore'
 import FlashCard from './components/FlashCard.vue'
+import SentencesFlashCard from './components/SentencesFlashCard.vue'
 import MatchingGame from './components/MatchingGame.vue'
 import TypingGame from './components/TypingGame.vue'
 
 const wordStore = useWordStore()
+const sentenceStore = useSentenceStore()
 const currentGame = ref('flashcard')
 const error = ref('')
 
 onMounted(async () => {
   try {
-    await wordStore.fetchWords()
+    await Promise.all([
+      wordStore.fetchWords(),
+      sentenceStore.fetchSentences()
+    ])
   } catch (err) {
-    error.value = 'Kon woorden niet laden. Controleer of de server draait.'
-    console.error('Error loading words:', err)
+    error.value = 'Kon data niet laden. Controleer of de server draait.'
+    console.error('Error loading data:', err)
   }
 })
 </script>

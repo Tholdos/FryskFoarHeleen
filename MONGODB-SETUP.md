@@ -5,10 +5,13 @@ Complete instructies voor het opzetten van je MongoDB database voor Frysk Foar H
 ## 🗄️ Database Structuur
 
 ### Database: `frysk_app`
-### Collection: `words`
+### Collections:
+- `words` - Individuele woorden
+- `sentences` - Hele zinnen
 
-## 📝 Woord Schema
+## 📝 Schemas
 
+### Words Schema
 ```javascript
 {
   _id: ObjectId,              // Auto-generated
@@ -18,6 +21,18 @@ Complete instructies voor het opzetten van je MongoDB database voor Frysk Foar H
   audioUrl: String | null,    // Pad naar audio bestand
   category: String,           // Categorie (familie, tijd, etc.)
   difficulty: Number,         // 1-5 (makkelijk naar moeilijk)
+  createdAt: Date            // Aanmaak datum
+}
+```
+
+### Sentences Schema
+```javascript
+{
+  _id: ObjectId,              // Auto-generated
+  frisian: String,            // Friese zin (verplicht)
+  dutch: String,              // Nederlandse vertaling (verplicht)
+  pronunciation: String,      // Uitspraak hulp
+  audioUrl: String | null,    // Pad naar audio bestand
   createdAt: Date            // Aanmaak datum
 }
 ```
@@ -47,7 +62,44 @@ Complete instructies voor het opzetten van je MongoDB database voor Frysk Foar H
    mongodb://localhost:27017/frysk_app
    ```
 
-## 📊 Initiële Data
+## 🌱 Data Importeren (AANBEVOLEN)
+
+### Automatisch met Seed Script
+
+De makkelijkste manier om woorden en zinnen te importeren:
+
+1. **Zorg dat MONGODB_URI is ingesteld** in `server/.env`:
+   ```
+   MONGODB_URI=mongodb+srv://username:password@cluster.mongodb.net/frysk_app
+   ```
+
+2. **Navigeer naar server directory**:
+   ```bash
+   cd server
+   ```
+
+3. **Run seed script**:
+   ```bash
+   npm run seed
+   ```
+   
+   Dit importeert automatisch:
+   - Alle woorden uit `words-data.json`
+   - Alle zinnen uit `sentences-data.json`
+
+4. **Om bestaande data te vervangen**:
+   ```bash
+   npm run seed:clear
+   ```
+   ⚠️ Dit verwijdert ALLE bestaande woorden en zinnen en importeert ze opnieuw!
+
+### Wat doet het seed script?
+- ✅ Controleert of collecties al data bevatten
+- ✅ Importeert alleen als collecties leeg zijn (safe)
+- ✅ Geeft duidelijke feedback over wat er gebeurt
+- ✅ Importeert zowel woorden als zinnen in één keer
+
+## 📊 Initiële Data (Handmatig)
 
 ### Via MongoDB Compass
 
@@ -181,7 +233,9 @@ db.words.find().pretty()
 
 ## 🔍 Handige Queries
 
-### Alle woorden
+### Woorden
+
+#### Alle woorden
 ```javascript
 db.words.find()
 ```
@@ -227,9 +281,43 @@ db.words.insertOne({
 })
 ```
 
-### Verwijder woord
+### Zinnen
+
+#### Alle zinnen
+```javascript
+db.sentences.find()
+```
+
+#### Random zinnen (voor spel)
+```javascript
+db.sentences.aggregate([{ $sample: { size: 5 } }])
+```
+
+#### Voeg zin toe
+```javascript
+db.sentences.insertOne({
+  frisian: "Ik yt in appel",
+  dutch: "Ik eet een appel",
+  pronunciation: "ik eet in appel",
+  audioUrl: null,
+  createdAt: new Date()
+})
+```
+
+#### Update zin
+```javascript
+db.sentences.updateOne(
+  { frisian: "Hoe giet it mei dy?" },
+  { $set: { audioUrl: "hoe-giet-it.mp3" } }
+)
+```
+
+### Algemeen
+
+### Verwijder document
 ```javascript
 db.words.deleteOne({ frisian: "test" })
+db.sentences.deleteOne({ frisian: "test zin" })
 ```
 
 ## 📁 Categorieën
@@ -337,6 +425,7 @@ db.words.createIndex({
 - [ ] Connection string opgeslagen in `.env`
 - [ ] Database `frysk_app` bestaat
 - [ ] Collection `words` bestaat
-- [ ] Minimaal 10 woorden toegevoegd
+- [ ] Collection `sentences` bestaat
+- [ ] Data geïmporteerd met `npm run seed`
 - [ ] Backend kan verbinden
 - [ ] Indexes aangemaakt (optioneel)

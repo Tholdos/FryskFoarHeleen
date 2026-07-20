@@ -36,6 +36,7 @@ app.use('/api/audio', express.static(path.join(__dirname, 'public/audio')))
 const MONGODB_URI = process.env.MONGODB_URI
 let db = null
 let wordsCollection = null
+let sentencesCollection = null
 
 // Connect to MongoDB
 async function connectDB() {
@@ -49,6 +50,7 @@ async function connectDB() {
     await client.connect()
     db = client.db('frysk_app')
     wordsCollection = db.collection('words')
+    sentencesCollection = db.collection('sentences')
     console.log('✅ Connected to MongoDB')
     return true
   } catch (error) {
@@ -98,70 +100,70 @@ const fallbackWords = [
     frisian: 'ien',
     dutch: 'een',
     pronunciation: 'zoals de Engelse naam "Ian"',
-    audioUrl: null
+    audioUrl: 'ien.mp3'
   },
   {
     _id: '6',
     frisian: 'twa',
     dutch: 'twee',
     pronunciation: 'twa',
-    audioUrl: null
+    audioUrl: 'twa.mp3'
   },
   {
     _id: '7',
     frisian: 'trije',
     dutch: 'drie',
     pronunciation: 'trije',
-    audioUrl: null
+    audioUrl: 'trije.mp3'
   },
   {
     _id: '8',
     frisian: 'fjouwer',
     dutch: 'vier',
     pronunciation: 'fjouwer',
-    audioUrl: null
+    audioUrl: 'fjouwer.mp3'
   },
   {
     _id: '9',
     frisian: 'fiif',
     dutch: 'vijf',
     pronunciation: 'fiif met een lange "i" zoals in het Engelse "see"',
-    audioUrl: null
+    audioUrl: 'fiif.mp3'
   },
   {
     _id: '10',
     frisian: 'seis',
     dutch: 'zes',
-    pronunciation: 'ergens tussen "saais" en "sòòìs"',
-    audioUrl: null
+    pronunciation: 'ergens tussen "saais" en "òòìs"',
+    audioUrl: 'seis.mp3'
   },
   {
     _id: '11',
     frisian: 'sân',
     dutch: 'zeven',
     pronunciation: 'Soo-wun, rijmt ongeveer op de Engelse naam "Owen", maar dan iets sneller uitgesproken',
-    audioUrl: null
+    audioUrl: 'sân.mp3'
   },
   {
     _id: '12',
     frisian: 'acht',
     dutch: 'acht',
     pronunciation: 'acht',
-    audioUrl: null
+    audioUrl: 'acht.mp3'
   },
   {
     _id: '13',
     frisian: 'njoggen',
     dutch: 'negen',
     pronunciation: 'njoggen',
-    audioUrl: null
+    audioUrl: 'njoggen.mp3'
   },
   {
     _id: '14',
     frisian: 'tsien',
     dutch: 'tien',
     pronunciation: 'rijmt op "Ian"',
-    audioUrl: null
+    audioUrl: 'tsien.mp3'
   },
   {
     _id: '15',
@@ -298,6 +300,80 @@ const fallbackWords = [
   }
 ]
 
+// Fallback sentences for development/testing
+const fallbackSentences = [
+  {
+    _id: 's1',
+    frisian: 'Hoe giet it mei dy?',
+    dutch: 'Hoe gaat het met jou?',
+    pronunciation: 'hoo-geet-it-may-die',
+    audioUrl: null
+  },
+  {
+    _id: 's2',
+    frisian: 'Goeie moarn!',
+    dutch: 'Goedemorgen!',
+    pronunciation: 'goo-ye-moarn',
+    audioUrl: null
+  },
+  {
+    _id: 's3',
+    frisian: 'Oant sjen!',
+    dutch: 'Tot ziens!',
+    pronunciation: 'oant-sjen',
+    audioUrl: null
+  },
+  {
+    _id: 's4',
+    frisian: 'Ik hâld fan dy.',
+    dutch: 'Ik hou van jou.',
+    pronunciation: 'ik-hold-fan-die',
+    audioUrl: null
+  },
+  {
+    _id: 's5',
+    frisian: 'Dankewol!',
+    dutch: 'Dankjewel!',
+    pronunciation: 'danke-wol',
+    audioUrl: null
+  },
+  {
+    _id: 's6',
+    frisian: 'Wolkom yn Fryslân!',
+    dutch: 'Welkom in Friesland!',
+    pronunciation: 'wol-kom-in-fries-lon',
+    audioUrl: null
+  },
+  {
+    _id: 's7',
+    frisian: 'Wat is dyn namme?',
+    dutch: 'Wat is jouw naam?',
+    pronunciation: 'wat-is-din-namme',
+    audioUrl: null
+  },
+  {
+    _id: 's8',
+    frisian: 'Ik bin Heleen.',
+    dutch: 'Ik ben Heleen.',
+    pronunciation: 'ik-bin-he-leen',
+    audioUrl: null
+  },
+  {
+    _id: 's9',
+    frisian: 'Moai waar hjoed!',
+    dutch: 'Mooi weer vandaag!',
+    pronunciation: 'moai-waar-hjoet',
+    audioUrl: null
+  },
+  {
+    _id: 's10',
+    frisian: 'It is kâld bûten.',
+    dutch: 'Het is koud buiten.',
+    pronunciation: 'it-is-kold-buten',
+    audioUrl: null
+  }
+]
+
 // Routes
 
 // Health check
@@ -407,6 +483,109 @@ app.post('/api/words', async (req, res) => {
   } catch (error) {
     console.error('Error adding word:', error)
     res.status(500).json({ error: 'Failed to add word' })
+  }
+})
+
+// ===== SENTENCES ENDPOINTS =====
+
+// Get all sentences
+app.get('/api/sentences', async (req, res) => {
+  try {
+    if (dbConnected && sentencesCollection) {
+      const sentences = await sentencesCollection.find({}).toArray()
+      // If MongoDB is empty, use fallback data
+      if (sentences.length === 0) {
+        res.json(fallbackSentences)
+      } else {
+        res.json(sentences)
+      }
+    } else {
+      // Use fallback data
+      res.json(fallbackSentences)
+    }
+  } catch (error) {
+    console.error('Error fetching sentences:', error)
+    res.status(500).json({ error: 'Failed to fetch sentences' })
+  }
+})
+
+// Get random sentences
+app.get('/api/sentences/random/:count', async (req, res) => {
+  try {
+    const count = parseInt(req.params.count) || 5
+    
+    if (dbConnected && sentencesCollection) {
+      const sentences = await sentencesCollection.aggregate([
+        { $sample: { size: count } }
+      ]).toArray()
+      // If MongoDB is empty, use fallback data
+      if (sentences.length === 0) {
+        const shuffled = [...fallbackSentences].sort(() => Math.random() - 0.5)
+        res.json(shuffled.slice(0, count))
+      } else {
+        res.json(sentences)
+      }
+    } else {
+      // Use fallback data
+      const shuffled = [...fallbackSentences].sort(() => Math.random() - 0.5)
+      res.json(shuffled.slice(0, count))
+    }
+  } catch (error) {
+    console.error('Error fetching random sentences:', error)
+    res.status(500).json({ error: 'Failed to fetch random sentences' })
+  }
+})
+
+// Get sentence by ID
+app.get('/api/sentences/:id', async (req, res) => {
+  try {
+    const { id } = req.params
+    
+    if (dbConnected && sentencesCollection) {
+      const sentence = await sentencesCollection.findOne({ _id: new ObjectId(id) })
+      if (!sentence) {
+        return res.status(404).json({ error: 'Sentence not found' })
+      }
+      res.json(sentence)
+    } else {
+      const sentence = fallbackSentences.find(s => s._id === id)
+      if (!sentence) {
+        return res.status(404).json({ error: 'Sentence not found' })
+      }
+      res.json(sentence)
+    }
+  } catch (error) {
+    console.error('Error fetching sentence:', error)
+    res.status(500).json({ error: 'Failed to fetch sentence' })
+  }
+})
+
+// Add new sentence (for future admin functionality)
+app.post('/api/sentences', async (req, res) => {
+  try {
+    const { frisian, dutch, pronunciation, audioUrl } = req.body
+    
+    if (!frisian || !dutch) {
+      return res.status(400).json({ error: 'Frisian and Dutch translations are required' })
+    }
+    
+    const newSentence = {
+      frisian,
+      dutch,
+      pronunciation: pronunciation || '',
+      audioUrl: audioUrl || null,
+      createdAt: new Date()
+    }
+    
+    if (dbConnected && sentencesCollection) {
+      const result = await sentencesCollection.insertOne(newSentence)
+      res.status(201).json({ _id: result.insertedId, ...newSentence })
+    } else {
+      res.status(503).json({ error: 'Database not available' })
+    }
+  } catch (error) {
+    console.error('Error adding sentence:', error)
+    res.status(500).json({ error: 'Failed to add sentence' })
   }
 })
 

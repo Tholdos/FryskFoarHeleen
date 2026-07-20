@@ -27,61 +27,61 @@
     "frisian": "ien",
     "dutch": "een",
     "pronunciation": "zoals de Engelse naam \"Ian\"",
-    "audioUrl": "ien.mp3"
+    "audioUrl": null
   },
   {
     "frisian": "twa",
     "dutch": "twee",
     "pronunciation": "twa",
-    "audioUrl": "twa.mp3"
+    "audioUrl": null
   },
   {
     "frisian": "trije",
     "dutch": "drie",
     "pronunciation": "trije",
-    "audioUrl": "trije.mp3"
+    "audioUrl": null
   },
   {
     "frisian": "fjouwer",
     "dutch": "vier",
     "pronunciation": "fjouwer",
-    "audioUrl": "fjouwer.mp3"
+    "audioUrl": null
   },
   {
     "frisian": "fiif",
     "dutch": "vijf",
     "pronunciation": "fiif met een lange \"i\" zoals in het Engelse \"see\"",
-    "audioUrl": "fiif.mp3"
+    "audioUrl": null
   },
   {
     "frisian": "seis",
     "dutch": "zes",
     "pronunciation": "ergens tussen \"saais\" en \"sòòìs\"",
-    "audioUrl": "seis.mp3"
+    "audioUrl": null
   },
   {
     "frisian": "sân",
     "dutch": "zeven",
     "pronunciation": "Soo-wun, rijmt ongeveer op de Engelse naam \"Owen\", maar dan iets sneller uitgesproken",
-    "audioUrl": "sân.mp3"
+    "audioUrl": null
   },
   {
     "frisian": "acht",
     "dutch": "acht",
     "pronunciation": "acht",
-    "audioUrl": "acht.mp3"
+    "audioUrl": null
   },
   {
     "frisian": "njoggen",
     "dutch": "negen",
     "pronunciation": "njoggen",
-    "audioUrl": "njoggen.mp3"
+    "audioUrl": null
   },
   {
     "frisian": "tsien",
     "dutch": "tien",
     "pronunciation": "rijmt op \"Ian\"",
-    "audioUrl": "tsien.mp3"
+    "audioUrl": null
   },
   {
     "frisian": "dei",
@@ -195,54 +195,6 @@
     "frisian": "wetter",
     "dutch": "water",
     "pronunciation": "wetter",
-    "audioUrl": null
-  },
-  {
-    "frisian": "ik",
-    "dutch": "ik",
-    "pronunciation": "ik",
-    "audioUrl": null
-  },
-  {
-    "frisian": "do",
-    "dutch": "jij",
-    "pronunciation": "do",
-    "audioUrl": null
-  },
-  {
-    "frisian": "hy",
-    "dutch": "hij",
-    "pronunciation": "hij",
-    "audioUrl": null
-  },
-  {
-    "frisian": "sy",
-    "dutch": "zij",
-    "pronunciation": "sij",
-    "audioUrl": null
-  },
-  {
-    "frisian": "wy",
-    "dutch": "wij",
-    "pronunciation": "wij",
-    "audioUrl": null
-  },
-  {
-    "frisian": "jim",
-    "dutch": "jullie",
-    "pronunciation": "jim",
-    "audioUrl": null
-  },
-  {
-    "frisian": "it",
-    "dutch": "het",
-    "pronunciation": "ut (zeg maar zoals het Nederlandse 't)",
-    "audioUrl": null
-  },
-  {
-    "frisian": "tút",
-    "dutch": "kus",
-    "pronunciation": "tuut (rijmt op NL 'buut')",
     "audioUrl": null
   }
 ]
