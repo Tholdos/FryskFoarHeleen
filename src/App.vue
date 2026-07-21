@@ -5,45 +5,90 @@
     </header>
 
     <main class="app-main">
-      <nav class="game-selector">
+      <!-- Main tabs -->
+      <nav class="main-tabs">
         <button 
-          @click="currentGame = 'flashcard'" 
-          :class="{ active: currentGame === 'flashcard' }"
+          @click="selectMainTab('flashcards')" 
+          :class="{ active: currentMainTab === 'flashcards' }"
         >
           Flashcards
         </button>
         <button 
-          @click="currentGame = 'zinnen'" 
-          :class="{ active: currentGame === 'zinnen' }"
+          @click="selectMainTab('spellen')" 
+          :class="{ active: currentMainTab === 'spellen' }"
+        >
+          Spellen
+        </button>
+        <button 
+          @click="selectMainTab('basis')" 
+          :class="{ active: currentMainTab === 'basis' }"
+        >
+          Basis
+        </button>
+      </nav>
+
+      <!-- Subtabs - only visible for active main tab -->
+      <nav class="sub-tabs" v-if="currentMainTab === 'flashcards'">
+        <button 
+          @click="currentSubTab = 'woorden'" 
+          :class="{ active: currentSubTab === 'woorden' }"
+        >
+          Woorden
+        </button>
+        <button 
+          @click="currentSubTab = 'zinnen'" 
+          :class="{ active: currentSubTab === 'zinnen' }"
         >
           Zinnen
         </button>
+      </nav>
+
+      <nav class="sub-tabs" v-if="currentMainTab === 'spellen'">
         <button 
-          @click="currentGame = 'klanken'" 
-          :class="{ active: currentGame === 'klanken' }"
-        >
-          Klanken
-        </button>
-        <button 
-          @click="currentGame = 'matching'" 
-          :class="{ active: currentGame === 'matching' }"
+          @click="currentSubTab = 'koppelen'" 
+          :class="{ active: currentSubTab === 'koppelen' }"
         >
           Koppelen
         </button>
         <button 
-          @click="currentGame = 'typing'" 
-          :class="{ active: currentGame === 'typing' }"
+          @click="currentSubTab = 'typen'" 
+          :class="{ active: currentSubTab === 'typen' }"
         >
           Typen
         </button>
       </nav>
 
+      <nav class="sub-tabs" v-if="currentMainTab === 'basis'">
+        <button 
+          @click="currentSubTab = 'klanken'" 
+          :class="{ active: currentSubTab === 'klanken' }"
+        >
+          Klanken
+        </button>
+        <button 
+          @click="currentSubTab = 'werkwoorden'" 
+          :class="{ active: currentSubTab === 'werkwoorden' }"
+          disabled
+          title="Komt binnenkort"
+        >
+          Werkwoorden
+        </button>
+      </nav>
+
       <div class="game-container">
-        <FlashCard v-if="currentGame === 'flashcard'" />
-        <SentencesFlashCard v-else-if="currentGame === 'zinnen'" />
-        <SoundsView v-else-if="currentGame === 'klanken'" />
-        <MatchingGame v-else-if="currentGame === 'matching'" />
-        <TypingGame v-else-if="currentGame === 'typing'" />
+        <!-- Flashcards main tab content -->
+        <FlashCard v-if="currentMainTab === 'flashcards' && currentSubTab === 'woorden'" />
+        <SentencesFlashCard v-else-if="currentMainTab === 'flashcards' && currentSubTab === 'zinnen'" />
+        
+        <!-- Spellen main tab content -->
+        <MatchingGame v-else-if="currentMainTab === 'spellen' && currentSubTab === 'koppelen'" />
+        <TypingGame v-else-if="currentMainTab === 'spellen' && currentSubTab === 'typen'" />
+        
+        <!-- Basis main tab content -->
+        <SoundsView v-else-if="currentMainTab === 'basis' && currentSubTab === 'klanken'" />
+        <div v-else-if="currentMainTab === 'basis' && currentSubTab === 'werkwoorden'" class="placeholder">
+          <p>Werkwoorden oefeningen komen binnenkort!</p>
+        </div>
       </div>
 
       <div v-if="error" class="error-message">
@@ -69,8 +114,23 @@ import TypingGame from './components/TypingGame.vue'
 
 const wordStore = useWordStore()
 const sentenceStore = useSentenceStore()
-const currentGame = ref('flashcard')
+const currentMainTab = ref('flashcards')
+const currentSubTab = ref('woorden')
 const error = ref('')
+
+// Function to handle main tab selection and set appropriate default subtab
+const selectMainTab = (mainTab) => {
+  currentMainTab.value = mainTab
+  
+  // Set default subtab based on main tab
+  if (mainTab === 'flashcards') {
+    currentSubTab.value = 'woorden'
+  } else if (mainTab === 'spellen') {
+    currentSubTab.value = 'koppelen'
+  } else if (mainTab === 'basis') {
+    currentSubTab.value = 'klanken'
+  }
+}
 
 onMounted(async () => {
   try {
@@ -125,11 +185,12 @@ onMounted(async () => {
   width: 100%;
 }
 
-.game-selector {
+/* Main tabs */
+.main-tabs {
   display: flex;
   gap: 1rem;
   justify-content: center;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
   padding: 0.5rem 0;
@@ -141,17 +202,65 @@ onMounted(async () => {
   -ms-overflow-style: none;
 }
 
-.game-selector::-webkit-scrollbar {
+.main-tabs::-webkit-scrollbar {
   display: none;
 }
 
-.game-selector button {
+.main-tabs button {
   padding: 0.75rem 1.5rem;
-  font-size: 1rem;
+  font-size: 1.1rem;
   border: 2px solid #667eea;
   background: white;
   color: #667eea;
   border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 600;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.main-tabs button:hover {
+  background: #667eea;
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(102, 126, 234, 0.3);
+}
+
+.main-tabs button.active {
+  background: #667eea;
+  color: white;
+  box-shadow: 0 4px 8px rgba(102, 126, 234, 0.3);
+}
+
+/* Subtabs */
+.sub-tabs {
+  display: flex;
+  gap: 0.75rem;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  padding: 0.5rem 0;
+  margin-left: -2rem;
+  margin-right: -2rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.sub-tabs::-webkit-scrollbar {
+  display: none;
+}
+
+.sub-tabs button {
+  padding: 0.5rem 1.25rem;
+  font-size: 0.9rem;
+  border: 2px solid #9f7aea;
+  background: white;
+  color: #9f7aea;
+  border-radius: 6px;
   cursor: pointer;
   transition: all 0.3s ease;
   font-weight: 500;
@@ -159,21 +268,35 @@ onMounted(async () => {
   flex-shrink: 0;
 }
 
-.game-selector button:hover {
-  background: #667eea;
+.sub-tabs button:hover:not(:disabled) {
+  background: #9f7aea;
   color: white;
   transform: translateY(-2px);
-  box-shadow: 0 4px 8px rgba(102, 126, 234, 0.3);
+  box-shadow: 0 4px 8px rgba(159, 122, 234, 0.3);
 }
 
-.game-selector button.active {
-  background: #667eea;
+.sub-tabs button.active {
+  background: #9f7aea;
   color: white;
-  box-shadow: 0 4px 8px rgba(102, 126, 234, 0.3);
+  box-shadow: 0 4px 8px rgba(159, 122, 234, 0.3);
+}
+
+.sub-tabs button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  border-color: #ccc;
+  color: #999;
 }
 
 .game-container {
   min-height: 400px;
+}
+
+.placeholder {
+  text-align: center;
+  padding: 4rem 2rem;
+  color: #666;
+  font-size: 1.2rem;
 }
 
 .error-message {
