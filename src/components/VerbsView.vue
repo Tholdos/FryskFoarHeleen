@@ -30,7 +30,7 @@
         <p class="modal-subtitle">{{ selectedVerb.translation }}</p>
 
         <div class="conjugation-section">
-          <h4>Foar de tiid (Tegenwoordige tijd)</h4>
+          <h4>Tegenwoordige tijd</h4>
           <div class="conjugation-grid">
             <div class="conjugation-row">
               <span class="pronoun">ik</span>
@@ -60,7 +60,7 @@
         </div>
 
         <div class="conjugation-section">
-          <h4>Ferline tiid (Verleden tijd)</h4>
+          <h4>Verleden tijd</h4>
           <div class="conjugation-grid">
             <div class="conjugation-row">
               <span class="pronoun">ik</span>
@@ -90,7 +90,7 @@
         </div>
 
         <div class="conjugation-section">
-          <h4>Foltooid tiid (Voltooid tegenwoordige tijd)</h4>
+          <h4>Voltooid deelwoord</h4>
           <div class="perfect-tense">
             <span class="pronoun">ik</span>
             <span class="conjugation">{{ selectedVerb.perfect }}</span>
