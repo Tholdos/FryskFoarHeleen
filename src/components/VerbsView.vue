@@ -33,27 +33,27 @@
           <h4>Foar de tiid (Tegenwoordige tijd)</h4>
           <div class="conjugation-grid">
             <div class="conjugation-row">
-              <span class="pronoun">Ik</span>
+              <span class="pronoun">ik</span>
               <span class="conjugation">{{ selectedVerb.present.ik }}</span>
             </div>
             <div class="conjugation-row">
-              <span class="pronoun">Do</span>
+              <span class="pronoun">do</span>
               <span class="conjugation">{{ selectedVerb.present.do }}</span>
             </div>
             <div class="conjugation-row">
-              <span class="pronoun">Hy/Sy</span>
+              <span class="pronoun">hy/sy</span>
               <span class="conjugation">{{ selectedVerb.present.hy_sy }}</span>
             </div>
             <div class="conjugation-row">
-              <span class="pronoun">Wy</span>
+              <span class="pronoun">wy</span>
               <span class="conjugation">{{ selectedVerb.present.wy }}</span>
             </div>
             <div class="conjugation-row">
-              <span class="pronoun">Jim</span>
+              <span class="pronoun">jim</span>
               <span class="conjugation">{{ selectedVerb.present.jim }}</span>
             </div>
             <div class="conjugation-row">
-              <span class="pronoun">Sy</span>
+              <span class="pronoun">sy</span>
               <span class="conjugation">{{ selectedVerb.present.sy }}</span>
             </div>
           </div>
@@ -63,27 +63,27 @@
           <h4>Ferline tiid (Verleden tijd)</h4>
           <div class="conjugation-grid">
             <div class="conjugation-row">
-              <span class="pronoun">Ik</span>
+              <span class="pronoun">ik</span>
               <span class="conjugation">{{ selectedVerb.past.ik }}</span>
             </div>
             <div class="conjugation-row">
-              <span class="pronoun">Do</span>
+              <span class="pronoun">do</span>
               <span class="conjugation">{{ selectedVerb.past.do }}</span>
             </div>
             <div class="conjugation-row">
-              <span class="pronoun">Hy/Sy</span>
+              <span class="pronoun">hy/sy</span>
               <span class="conjugation">{{ selectedVerb.past.hy_sy }}</span>
             </div>
             <div class="conjugation-row">
-              <span class="pronoun">Wy</span>
+              <span class="pronoun">wy</span>
               <span class="conjugation">{{ selectedVerb.past.wy }}</span>
             </div>
             <div class="conjugation-row">
-              <span class="pronoun">Jim</span>
+              <span class="pronoun">jim</span>
               <span class="conjugation">{{ selectedVerb.past.jim }}</span>
             </div>
             <div class="conjugation-row">
-              <span class="pronoun">Sy</span>
+              <span class="pronoun">sy</span>
               <span class="conjugation">{{ selectedVerb.past.sy }}</span>
             </div>
           </div>
@@ -92,7 +92,7 @@
         <div class="conjugation-section">
           <h4>Foltooid tiid (Voltooid tegenwoordige tijd)</h4>
           <div class="perfect-tense">
-            <span class="pronoun">Ik</span>
+            <span class="pronoun">ik</span>
             <span class="conjugation">{{ selectedVerb.perfect }}</span>
           </div>
         </div>
