@@ -545,6 +545,160 @@ const fallbackVerbs = [
       sy: 'gienen'
     },
     perfect: 'bin gien'
+  },
+  {
+    _id: 'v6',
+    infinitive: 'komme',
+    translation: 'komen',
+    present: {
+      ik: 'kom',
+      do: 'komst',
+      hy_sy: 'komt',
+      wy: 'komme',
+      jim: 'komme',
+      sy: 'komme'
+    },
+    past: {
+      ik: 'kaam',
+      do: 'kaamst',
+      hy_sy: 'kaam',
+      wy: 'kamen',
+      jim: 'kamen',
+      sy: 'kamen'
+    },
+    perfect: 'bin kommen'
+  },
+  {
+    _id: 'v7',
+    infinitive: 'sille',
+    translation: 'zullen',
+    present: {
+      ik: 'sil',
+      do: 'silst',
+      hy_sy: 'sil',
+      wy: 'sille',
+      jim: 'sille',
+      sy: 'sille'
+    },
+    past: {
+      ik: 'soe',
+      do: 'soest',
+      hy_sy: 'soe',
+      wy: 'soenen',
+      jim: 'soenen',
+      sy: 'soenen'
+    },
+    perfect: 'haw sild'
+  },
+  {
+    _id: 'v8',
+    infinitive: 'wolle',
+    translation: 'willen',
+    present: {
+      ik: 'wol',
+      do: 'wolst',
+      hy_sy: 'wol',
+      wy: 'wolle',
+      jim: 'wolle',
+      sy: 'wolle'
+    },
+    past: {
+      ik: 'woe',
+      do: 'woest',
+      hy_sy: 'woe',
+      wy: 'woenen',
+      jim: 'woenen',
+      sy: 'woenen'
+    },
+    perfect: 'haw wold'
+  },
+  {
+    _id: 'v9',
+    infinitive: 'nimme',
+    translation: 'nemen',
+    present: {
+      ik: 'nim',
+      do: 'nimst',
+      hy_sy: 'nimt',
+      wy: 'nimme',
+      jim: 'nimme',
+      sy: 'nimme'
+    },
+    past: {
+      ik: 'naam',
+      do: 'naamst',
+      hy_sy: 'naam',
+      wy: 'namen',
+      jim: 'namen',
+      sy: 'namen'
+    },
+    perfect: 'haw nommen'
+  },
+  {
+    _id: 'v10',
+    infinitive: 'meie',
+    translation: 'mogen',
+    present: {
+      ik: 'mei',
+      do: 'meist',
+      hy_sy: 'mei',
+      wy: 'meie',
+      jim: 'meie',
+      sy: 'meie'
+    },
+    past: {
+      ik: 'mocht',
+      do: 'mochtst',
+      hy_sy: 'mocht',
+      wy: 'mochten',
+      jim: 'mochten',
+      sy: 'mochten'
+    },
+    perfect: 'haw meid'
+  },
+  {
+    _id: 'v11',
+    infinitive: 'moatte',
+    translation: 'moeten',
+    present: {
+      ik: 'moat',
+      do: 'moatst',
+      hy_sy: 'moat',
+      wy: 'moatte',
+      jim: 'moatte',
+      sy: 'moatte'
+    },
+    past: {
+      ik: 'moast',
+      do: 'moastst',
+      hy_sy: 'moast',
+      wy: 'moasten',
+      jim: 'moasten',
+      sy: 'moasten'
+    },
+    perfect: 'haw moatten'
+  },
+  {
+    _id: 'v12',
+    infinitive: 'krije',
+    translation: 'krijgen',
+    present: {
+      ik: 'krij',
+      do: 'krijst',
+      hy_sy: 'krijt',
+      wy: 'krije',
+      jim: 'krije',
+      sy: 'krije'
+    },
+    past: {
+      ik: 'krige',
+      do: 'krigest',
+      hy_sy: 'krige',
+      wy: 'krigen',
+      jim: 'krigen',
+      sy: 'krigen'
+    },
+    perfect: 'haw krigen'
   }
 ]
 
