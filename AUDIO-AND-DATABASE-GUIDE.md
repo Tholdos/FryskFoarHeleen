@@ -126,7 +126,7 @@ Example audioUrl in MongoDB: `https://your-bucket.s3.amazonaws.com/audio/mem.mp3
    - Replace `<password>` with your actual password
    - Add to your `.env` file:
    ```
-   MONGODB_URI=mongodb+srv://username:password@cluster.mongodb.net/frysk_app?retryWrites=true&w=majority
+   MONGODB_URI=mongodb+srv://username:password@cluster.mongodb.net/frysk_foar_heleen?retryWrites=true&w=majority
    ```
 
 ### Step 2: Prepare Your Word List
@@ -163,7 +163,7 @@ Create a JSON file `words-data.json` with your complete word list:
 
 1. Download and install MongoDB Compass
 2. Connect using your connection string
-3. Create database `frysk_app` and collection `words`
+3. Create database `frysk_foar_heleen` and collection `words`
 4. Click "Add Data" → "Import JSON or CSV file"
 5. Select your `words-data.json` file
 6. Import!
@@ -185,7 +185,7 @@ async function importWords() {
     await client.connect()
     console.log('Connected to MongoDB')
     
-    const db = client.db('frysk_app')
+    const db = client.db('frysk_foar_heleen')
     const collection = db.collection('words')
     
     // Clear existing data (optional)
@@ -215,7 +215,7 @@ node import-words.js
 
 ```bash
 mongoimport --uri "your-connection-string" \
-  --db frysk_app \
+  --db frysk_foar_heleen \
   --collection words \
   --file words-data.json \
   --jsonArray
@@ -234,7 +234,7 @@ async function setupIndexes() {
   
   try {
     await client.connect()
-    const db = client.db('frysk_app')
+    const db = client.db('frysk_foar_heleen')
     const collection = db.collection('words')
     
     // Create text search index for searching words

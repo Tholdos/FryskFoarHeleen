@@ -50,7 +50,7 @@ async function connectDB() {
   try {
     const client = new MongoClient(MONGODB_URI)
     await client.connect()
-    db = client.db('frysk_app')
+    db = client.db('frysk_foar_heleen')
     wordsCollection = db.collection('words')
     sentencesCollection = db.collection('sentences')
     soundsCollection = db.collection('sounds')

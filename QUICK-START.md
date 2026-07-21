@@ -30,7 +30,7 @@ cd server
 cp .env.example .env
 
 # Bewerk server/.env en voeg toe:
-MONGODB_URI=mongodb+srv://username:password@cluster.mongodb.net/frysk_app
+MONGODB_URI=mongodb+srv://username:password@cluster.mongodb.net/frysk_foar_heleen
 ```
 
 ### 3. Start de App

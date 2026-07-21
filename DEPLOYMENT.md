@@ -54,17 +54,17 @@ We gebruiken drie gratis services:
    mongodb+srv://frysk_admin:<password>@frysk-cluster.xxxxx.mongodb.net/
    ```
 5. Vervang `<password>` met je echte wachtwoord
-6. Voeg database naam toe aan het einde: `frysk_app`
+6. Voeg database naam toe aan het einde: `frysk_foar_heleen`
 
 **Voorbeeld:**
 ```
-mongodb+srv://frysk_admin:MijnWachtwoord123@frysk-cluster.xxxxx.mongodb.net/frysk_app
+mongodb+srv://frysk_admin:MijnWachtwoord123@frysk-cluster.xxxxx.mongodb.net/frysk_foar_heleen
 ```
 
 ### Stap 6: Initiële Data Toevoegen
 1. Ga naar "Database" → "Browse Collections"
 2. Klik "Add My Own Data"
-3. Database name: `frysk_app`
+3. Database name: `frysk_foar_heleen`
 4. Collection name: `words`
 5. Klik "Create"
 
@@ -123,7 +123,7 @@ mongodb+srv://frysk_admin:MijnWachtwoord123@frysk-cluster.xxxxx.mongodb.net/frys
 3. Voeg toe:
    ```
    Key: MONGODB_URI
-   Value: mongodb+srv://frysk_admin:password@frysk-cluster.xxxxx.mongodb.net/frysk_app
+   Value: mongodb+srv://frysk_admin:password@frysk-cluster.xxxxx.mongodb.net/frysk_foar_heleen
    ```
    (gebruik je eigen connection string!)
 

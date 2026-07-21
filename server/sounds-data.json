@@ -64,10 +64,10 @@
   },
   {
     "_id": "snd10",
-    "combination": "ô",
+    "combination": "uo",
     "pronunciation": "òò (zoals in NL \"òòh!\")",
     "example": "bôle (brood)",
-    "audioUrl": "ô.mp3"
+    "audioUrl": null
   },
   {
     "_id": "snd11",

@@ -4,7 +4,7 @@ Complete instructies voor het opzetten van je MongoDB database voor Frysk Foar H
 
 ## 🗄️ Database Structuur
 
-### Database: `frysk_app`
+### Database: `frysk_foar_heleen`
 ### Collections:
 - `words` - Individuele woorden
 - `sentences` - Hele zinnen
@@ -59,7 +59,7 @@ Complete instructies voor het opzetten van je MongoDB database voor Frysk Foar H
 4. **Whitelist IP**: 0.0.0.0/0 (of specifiek IP)
 5. **Connection String**: 
    ```
-   mongodb+srv://username:password@cluster.mongodb.net/frysk_app
+   mongodb+srv://username:password@cluster.mongodb.net/frysk_foar_heleen
    ```
 
 ### Optie 2: Lokaal (Development)
@@ -71,7 +71,7 @@ Complete instructies voor het opzetten van je MongoDB database voor Frysk Foar H
    ```
 3. **Connection String**:
    ```
-   mongodb://localhost:27017/frysk_app
+   mongodb://localhost:27017/frysk_foar_heleen
    ```
 
 ## 🌱 Data Importeren (AANBEVOLEN)
@@ -82,7 +82,7 @@ De makkelijkste manier om woorden en zinnen te importeren:
 
 1. **Zorg dat MONGODB_URI is ingesteld** in `server/.env`:
    ```
-   MONGODB_URI=mongodb+srv://username:password@cluster.mongodb.net/frysk_app
+   MONGODB_URI=mongodb+srv://username:password@cluster.mongodb.net/frysk_foar_heleen
    ```
 
 2. **Navigeer naar server directory**:
@@ -118,7 +118,7 @@ De makkelijkste manier om woorden en zinnen te importeren:
 
 1. **Download Compass**: https://www.mongodb.com/try/download/compass
 2. **Connect** met je connection string
-3. **Maak database**: `frysk_app`
+3. **Maak database**: `frysk_foar_heleen`
 4. **Maak collection**: `words`
 5. **Insert Document** → Copy onderstaande JSON
 
@@ -223,7 +223,7 @@ De makkelijkste manier om woorden en zinnen te importeren:
 
 ```javascript
 // Connect naar database
-use frysk_app
+use frysk_foar_heleen
 
 // Insert meerdere documenten
 db.words.insertMany([
@@ -370,7 +370,7 @@ Aanbevolen categorieën:
 # Gebruik environment variables
 
 # .env file (niet in git!)
-MONGODB_URI=mongodb+srv://user:pass@cluster.net/frysk_app
+MONGODB_URI=mongodb+srv://user:pass@cluster.net/frysk_foar_heleen
 ```
 
 ## 🔄 Backup & Restore
@@ -436,7 +436,7 @@ db.words.createIndex({
 - [ ] Database user met credentials
 - [ ] IP whitelist geconfigureerd
 - [ ] Connection string opgeslagen in `.env`
-- [ ] Database `frysk_app` bestaat
+- [ ] Database `frysk_foar_heleen` bestaat
 - [ ] Collection `words` bestaat
 - [ ] Collection `sentences` bestaat
 - [ ] Collection `sounds` bestaat

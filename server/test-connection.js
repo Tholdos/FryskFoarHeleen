@@ -23,7 +23,7 @@ async function testConnection() {
     await client.connect()
     console.log('✅ Successfully connected to MongoDB!')
     
-    const db = client.db('frysk_app')
+    const db = client.db('frysk_foar_heleen')
     
     // List collections
     const collections = await db.listCollections().toArray()

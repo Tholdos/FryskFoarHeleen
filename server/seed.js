@@ -4,6 +4,7 @@ require('dotenv').config()
 const wordsData = require('./words-data.json')
 const sentencesData = require('./sentences-data.json')
 const soundsData = require('./sounds-data.json')
+const verbsData = require('./verbs-data.json')
 
 const MONGODB_URI = process.env.MONGODB_URI
 
@@ -11,7 +12,7 @@ async function seedDatabase() {
   if (!MONGODB_URI) {
     console.error('❌ Error: MONGODB_URI not found in .env file')
     console.log('Please add your MongoDB connection string to server/.env')
-    console.log('Example: MONGODB_URI=mongodb+srv://username:password@cluster.mongodb.net/frysk_app')
+    console.log('Example: MONGODB_URI=mongodb+srv://username:password@cluster.mongodb.net/frysk_foar_heleen')
     process.exit(1)
   }
 
@@ -24,7 +25,7 @@ async function seedDatabase() {
     await client.connect()
     console.log('✅ Connected to MongoDB')
     
-    const db = client.db('frysk_app')
+    const db = client.db('frysk_foar_heleen')
     
     // Seed Words
     const wordsCollection = db.collection('words')
@@ -69,9 +70,22 @@ async function seedDatabase() {
       console.log(`✅ Inserted ${soundsData.length} sounds`)
     }
     
+    // Seed Verbs
+    const verbsCollection = db.collection('verbs')
+    const existingVerbsCount = await verbsCollection.countDocuments()
+    
+    if (existingVerbsCount > 0) {
+      console.log(`⚠️  Verbs collection already has ${existingVerbsCount} documents`)
+      console.log('Skipping verbs import...')
+      console.log('To clear and reimport: npm run seed:clear')
+    } else {
+      await verbsCollection.insertMany(verbsData)
+      console.log(`✅ Inserted ${verbsData.length} verbs`)
+    }
+    
     console.log('')
     console.log('🎉 Database seeding completed!')
-    console.log(`📊 Total: ${wordsData.length} words, ${sentencesData.length} sentences, ${soundsData.length} sounds`)
+    console.log(`📊 Total: ${wordsData.length} words, ${sentencesData.length} sentences, ${soundsData.length} sounds, ${verbsData.length} verbs`)
     
   } catch (error) {
     console.error('❌ Error seeding database:', error)
@@ -98,7 +112,7 @@ async function clearAndSeed() {
     await client.connect()
     console.log('✅ Connected to MongoDB')
     
-    const db = client.db('frysk_app')
+    const db = client.db('frysk_foar_heleen')
     
     // Clear and seed words
     const wordsCollection = db.collection('words')
@@ -117,6 +131,12 @@ async function clearAndSeed() {
     await soundsCollection.deleteMany({})
     await soundsCollection.insertMany(soundsData)
     console.log(`✅ Cleared and inserted ${soundsData.length} sounds`)
+    
+    // Clear and seed verbs
+    const verbsCollection = db.collection('verbs')
+    await verbsCollection.deleteMany({})
+    await verbsCollection.insertMany(verbsData)
+    console.log(`✅ Cleared and inserted ${verbsData.length} verbs`)
     
     console.log('')
     console.log('🎉 Database cleared and reseeded successfully!')

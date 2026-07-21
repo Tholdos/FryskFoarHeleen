@@ -5,7 +5,7 @@
 ### 1. Make sure your MongoDB connection is set up
 Check that `server/.env` contains your MongoDB URI:
 ```
-MONGODB_URI=mongodb+srv://username:password@cluster.mongodb.net/frysk_app
+MONGODB_URI=mongodb+srv://username:password@cluster.mongodb.net/frysk_foar_heleen
 ```
 
 ### 2. Run the seed script
@@ -20,7 +20,7 @@ This automatically imports:
 
 ### 3. Verify in MongoDB Compass
 1. Connect to your database
-2. Check `frysk_app` database
+2. Check `frysk_foar_heleen` database
 3. You should see two collections:
    - `words` (with ~33 documents)
    - `sentences` (with ~10 documents)
@@ -53,7 +53,7 @@ npm run seed:clear
 
 ### Option 2: Via MongoDB Compass (for single additions)
 1. Open MongoDB Compass
-2. Navigate to `frysk_app` → `sentences`
+2. Navigate to `frysk_foar_heleen` → `sentences`
 3. Click "ADD DATA" → "Insert Document"
 4. Paste your sentence:
    ```json
@@ -67,7 +67,7 @@ npm run seed:clear
 
 ### Option 3: Via MongoDB Shell
 ```javascript
-use frysk_app
+use frysk_foar_heleen
 
 db.sentences.insertOne({
   frisian: "Ik yt in appel",
