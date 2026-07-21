@@ -38,6 +38,7 @@ let db = null
 let wordsCollection = null
 let sentencesCollection = null
 let soundsCollection = null
+let verbsCollection = null
 
 // Connect to MongoDB
 async function connectDB() {
@@ -53,6 +54,7 @@ async function connectDB() {
     wordsCollection = db.collection('words')
     sentencesCollection = db.collection('sentences')
     soundsCollection = db.collection('sounds')
+    verbsCollection = db.collection('verbs')
     console.log('✅ Connected to MongoDB')
     return true
   } catch (error) {
@@ -432,6 +434,120 @@ const fallbackSentences = [
   }
 ]
 
+// Fallback verbs for development/testing
+const fallbackVerbs = [
+  {
+    _id: 'v1',
+    infinitive: 'wêze',
+    translation: 'zijn (to be)',
+    present: {
+      ik: 'bin',
+      do: 'bist',
+      hy_sy: 'is',
+      wy: 'binne',
+      jim: 'binne',
+      sy: 'binne'
+    },
+    past: {
+      ik: 'wie',
+      do: 'wiest',
+      hy_sy: 'wie',
+      wy: 'wiene',
+      jim: 'wiene',
+      sy: 'wiene'
+    },
+    perfect: 'haw west'
+  },
+  {
+    _id: 'v2',
+    infinitive: 'hawwe',
+    translation: 'hebben (to have)',
+    present: {
+      ik: 'haw',
+      do: 'hast',
+      hy_sy: 'hat',
+      wy: 'hawwe',
+      jim: 'hawwe',
+      sy: 'hawwe'
+    },
+    past: {
+      ik: 'hie',
+      do: 'hiest',
+      hy_sy: 'hie',
+      wy: 'hienen',
+      jim: 'hienen',
+      sy: 'hienen'
+    },
+    perfect: 'haw hân'
+  },
+  {
+    _id: 'v3',
+    infinitive: 'kinne',
+    translation: 'kunnen (can)',
+    present: {
+      ik: 'kin',
+      do: 'kinst',
+      hy_sy: 'kin',
+      wy: 'kinne',
+      jim: 'kinne',
+      sy: 'kinne'
+    },
+    past: {
+      ik: 'koe',
+      do: 'koest',
+      hy_sy: 'koe',
+      wy: 'koenen',
+      jim: 'koenen',
+      sy: 'koenen'
+    },
+    perfect: 'haw kind'
+  },
+  {
+    _id: 'v4',
+    infinitive: 'dwaan',
+    translation: 'doen (to do)',
+    present: {
+      ik: 'doch',
+      do: 'dochst',
+      hy_sy: 'docht',
+      wy: 'dogge',
+      jim: 'dogge',
+      sy: 'dogge'
+    },
+    past: {
+      ik: 'die',
+      do: 'diest',
+      hy_sy: 'die',
+      wy: 'dienen',
+      jim: 'dienen',
+      sy: 'dienen'
+    },
+    perfect: 'haw dien'
+  },
+  {
+    _id: 'v5',
+    infinitive: 'gean',
+    translation: 'gaan (to go)',
+    present: {
+      ik: 'gean',
+      do: 'geist',
+      hy_sy: 'giet',
+      wy: 'geane',
+      jim: 'geane',
+      sy: 'geane'
+    },
+    past: {
+      ik: 'gie',
+      do: 'giest',
+      hy_sy: 'gie',
+      wy: 'gienen',
+      jim: 'gienen',
+      sy: 'gienen'
+    },
+    perfect: 'bin gien'
+  }
+]
+
 // Fallback sounds for development/testing
 const fallbackSounds = [
   {
@@ -755,6 +871,27 @@ app.get('/api/sounds', async (req, res) => {
   } catch (error) {
     console.error('Error fetching sounds:', error)
     res.status(500).json({ error: 'Failed to fetch sounds' })
+  }
+})
+
+// Get all verbs
+app.get('/api/verbs', async (req, res) => {
+  try {
+    if (dbConnected && verbsCollection) {
+      const verbs = await verbsCollection.find({}).toArray()
+      // If MongoDB is empty, use fallback data
+      if (verbs.length === 0) {
+        res.json(fallbackVerbs)
+      } else {
+        res.json(verbs)
+      }
+    } else {
+      // Use fallback data
+      res.json(fallbackVerbs)
+    }
+  } catch (error) {
+    console.error('Error fetching verbs:', error)
+    res.status(500).json({ error: 'Failed to fetch verbs' })
   }
 })
 

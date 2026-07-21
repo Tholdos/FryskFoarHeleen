@@ -68,8 +68,6 @@
         <button 
           @click="currentSubTab = 'werkwoorden'" 
           :class="{ active: currentSubTab === 'werkwoorden' }"
-          disabled
-          title="Komt binnenkort"
         >
           Werkwoorden
         </button>
@@ -86,9 +84,7 @@
         
         <!-- Basis main tab content -->
         <SoundsView v-else-if="currentMainTab === 'basis' && currentSubTab === 'klanken'" />
-        <div v-else-if="currentMainTab === 'basis' && currentSubTab === 'werkwoorden'" class="placeholder">
-          <p>Werkwoorden oefeningen komen binnenkort!</p>
-        </div>
+        <VerbsView v-else-if="currentMainTab === 'basis' && currentSubTab === 'werkwoorden'" />
       </div>
 
       <div v-if="error" class="error-message">
@@ -106,14 +102,17 @@
 import { ref, onMounted } from 'vue'
 import { useWordStore } from './stores/wordStore'
 import { useSentenceStore } from './stores/sentenceStore'
+import { useVerbStore } from './stores/verbStore'
 import FlashCard from './components/FlashCard.vue'
 import SentencesFlashCard from './components/SentencesFlashCard.vue'
 import SoundsView from './components/SoundsView.vue'
+import VerbsView from './components/VerbsView.vue'
 import MatchingGame from './components/MatchingGame.vue'
 import TypingGame from './components/TypingGame.vue'
 
 const wordStore = useWordStore()
 const sentenceStore = useSentenceStore()
+const verbStore = useVerbStore()
 const currentMainTab = ref('flashcards')
 const currentSubTab = ref('woorden')
 const error = ref('')
@@ -136,7 +135,8 @@ onMounted(async () => {
   try {
     await Promise.all([
       wordStore.fetchWords(),
-      sentenceStore.fetchSentences()
+      sentenceStore.fetchSentences(),
+      verbStore.fetchVerbs()
     ])
   } catch (err) {
     error.value = 'Kon data niet laden. Controleer of de server draait.'
