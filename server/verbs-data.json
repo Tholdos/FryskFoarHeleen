@@ -93,7 +93,7 @@
     "translation": "gaan",
     "present": {
       "ik": "gean",
-      "do": "geist",
+      "do": "giest",
       "hy_sy": "giet",
       "wy": "geane",
       "jim": "geane",
@@ -151,7 +151,7 @@
       "jim": "soenen",
       "sy": "soenen"
     },
-    "perfect": "haw sild"
+    "perfect": "haw sillen"
   },
   {
     "_id": "v8",
@@ -173,7 +173,7 @@
       "jim": "woenen",
       "sy": "woenen"
     },
-    "perfect": "haw wold"
+    "perfect": "haw wollen"
   },
   {
     "_id": "v9",
@@ -217,7 +217,7 @@
       "jim": "mochten",
       "sy": "mochten"
     },
-    "perfect": "haw meid"
+    "perfect": "haw mocht"
   },
   {
     "_id": "v11",
@@ -232,12 +232,12 @@
       "sy": "moatte"
     },
     "past": {
-      "ik": "moast",
-      "do": "moastst",
-      "hy_sy": "moast",
-      "wy": "moasten",
-      "jim": "moasten",
-      "sy": "moasten"
+      "ik": "moest",
+      "do": "moest",
+      "hy_sy": "moaet",
+      "wy": "moesten",
+      "jim": "moesten",
+      "sy": "moesten"
     },
     "perfect": "haw moatten"
   },
@@ -254,9 +254,9 @@
       "sy": "krije"
     },
     "past": {
-      "ik": "krige",
-      "do": "krigest",
-      "hy_sy": "krige",
+      "ik": "krie",
+      "do": "kriest",
+      "hy_sy": "krie",
       "wy": "krigen",
       "jim": "krigen",
       "sy": "krigen"
