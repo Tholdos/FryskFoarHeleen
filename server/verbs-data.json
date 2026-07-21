@@ -2,7 +2,7 @@
   {
     "_id": "v1",
     "infinitive": "wêze",
-    "translation": "zijn (to be)",
+    "translation": "zijn",
     "present": {
       "ik": "bin",
       "do": "bist",
@@ -15,16 +15,16 @@
       "ik": "wie",
       "do": "wiest",
       "hy_sy": "wie",
-      "wy": "wiene",
-      "jim": "wiene",
-      "sy": "wiene"
+      "wy": "wienen",
+      "jim": "wienen",
+      "sy": "wienen"
     },
     "perfect": "haw west"
   },
   {
     "_id": "v2",
     "infinitive": "hawwe",
-    "translation": "hebben (to have)",
+    "translation": "hebben",
     "present": {
       "ik": "haw",
       "do": "hast",
@@ -46,7 +46,7 @@
   {
     "_id": "v3",
     "infinitive": "kinne",
-    "translation": "kunnen (can)",
+    "translation": "kunnen",
     "present": {
       "ik": "kin",
       "do": "kinst",
@@ -63,12 +63,12 @@
       "jim": "koenen",
       "sy": "koenen"
     },
-    "perfect": "haw kind"
+    "perfect": "haw kinnen"
   },
   {
     "_id": "v4",
     "infinitive": "dwaan",
-    "translation": "doen (to do)",
+    "translation": "doen",
     "present": {
       "ik": "doch",
       "do": "dochst",
@@ -90,7 +90,7 @@
   {
     "_id": "v5",
     "infinitive": "gean",
-    "translation": "gaan (to go)",
+    "translation": "gaan",
     "present": {
       "ik": "gean",
       "do": "geist",
