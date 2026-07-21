@@ -615,10 +615,10 @@ const fallbackSounds = [
   },
   {
     _id: 'snd10',
-    combination: 'ô',
-    pronunciation: 'òò (zoals in NL "òòh!")',
-    example: 'bôle (brood)',
-    audioUrl: 'ô.mp3'
+    combination: 'uo',
+    pronunciation: 'wo (zoals in EN "won\'t")',
+    example: 'skuon (schoenen)',
+    audioUrl: null
   },
   {
     _id: 'snd11',
@@ -633,6 +633,13 @@ const fallbackSounds = [
     pronunciation: 'ie (zoals in NL "zien")',
     example: 'wyn (wind)',
     audioUrl: 'y.mp3'
+  },
+  {
+    _id: 'snd13',
+    combination: 'oai',
+    pronunciation: 'ooi (zoals in NL "mooi")',
+    example: 'moai (mooi)',
+    audioUrl: null
   }
 ]
 
