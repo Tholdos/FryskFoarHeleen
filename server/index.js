@@ -439,7 +439,7 @@ const fallbackVerbs = [
   {
     _id: 'v1',
     infinitive: 'wêze',
-    translation: 'zijn (to be)',
+    translation: 'zijn',
     present: {
       ik: 'bin',
       do: 'bist',
@@ -461,7 +461,7 @@ const fallbackVerbs = [
   {
     _id: 'v2',
     infinitive: 'hawwe',
-    translation: 'hebben (to have)',
+    translation: 'hebben',
     present: {
       ik: 'haw',
       do: 'hast',
@@ -483,7 +483,7 @@ const fallbackVerbs = [
   {
     _id: 'v3',
     infinitive: 'kinne',
-    translation: 'kunnen (can)',
+    translation: 'kunnen',
     present: {
       ik: 'kin',
       do: 'kinst',
@@ -505,7 +505,7 @@ const fallbackVerbs = [
   {
     _id: 'v4',
     infinitive: 'dwaan',
-    translation: 'doen (to do)',
+    translation: 'doen',
     present: {
       ik: 'doch',
       do: 'dochst',
@@ -527,7 +527,7 @@ const fallbackVerbs = [
   {
     _id: 'v5',
     infinitive: 'gean',
-    translation: 'gaan (to go)',
+    translation: 'gaan',
     present: {
       ik: 'gean',
       do: 'geist',

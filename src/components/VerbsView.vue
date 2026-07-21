@@ -1,8 +1,6 @@
 <template>
   <div class="verbs-view">
-    <h2>Fryske Wurkwurden</h2>
-    <p class="subtitle">Klik op in wurkwurd om de ferfoegingen te sjen</p>
-
+    <h2>Friese werkwoorden</h2>
     <div v-if="verbStore.loading" class="loading">
       Lade...
     </div>
