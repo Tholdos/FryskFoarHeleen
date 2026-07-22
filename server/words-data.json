@@ -244,5 +244,41 @@
     "dutch": "kus",
     "pronunciation": "tuut (rijmt op NL 'buut')",
     "audioUrl": "tút.mp3"
+  },
+  {
+    "frisian": "hûs",
+    "dutch": "huis",
+    "pronunciation": "hûs (met een lange oe-klank, zoals in het Engelse 'moo')",
+    "audioUrl": "hûs.mp3"
+  },
+  {
+    "frisian": "hoi",
+    "dutch": "hoi",
+    "pronunciation": "hoi",
+    "audioUrl": "hoi.mp3"
+  },
+  {
+    "frisian": "jonge",
+    "dutch": "jongen",
+    "pronunciation": "jonge",
+    "audioUrl": "jonge.mp3"
+  },
+  {
+    "frisian": "famke",
+    "dutch": "meisje",
+    "pronunciation": "famke",
+    "audioUrl": "famke.mp3"
+  },
+  {
+    "frisian": "frou",
+    "dutch": "vrouw",
+    "pronunciation": "frou",
+    "audioUrl": "frou.mp3"
+  },
+  {
+    "frisian": "man",
+    "dutch": "man",
+    "pronunciation": "mon",
+    "audioUrl": "man.mp3"
   }
 ]

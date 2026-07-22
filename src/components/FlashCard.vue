@@ -1,7 +1,7 @@
 <template>
   <div class="flashcard-container">
     <div v-if="wordStore.loading" class="loading">
-      Loading words...
+      Woorden laden...
     </div>
 
     <div v-else-if="currentWord" class="flashcard-wrapper">

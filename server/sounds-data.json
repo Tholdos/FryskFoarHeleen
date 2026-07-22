@@ -67,7 +67,7 @@
     "combination": "uo",
     "pronunciation": "wo (zoals in EN \"won't\")",
     "example": "skuon (schoenen)",
-    "audioUrl": null
+    "audioUrl": "uo.mp3"
   },
   {
     "_id": "snd11",
@@ -88,6 +88,6 @@
     "combination": "oai",
     "pronunciation": "ooi (zoals in NL \"mooi\")",
     "example": "moai (mooi)",
-    "audioUrl": null
+    "audioUrl": "oai.mp3"
   }
 ]

@@ -358,6 +358,48 @@ const fallbackWords = [
     pronunciation: 'tuut (rijmt op NL \'buut\')',
     audioUrl: 'tút.mp3'
   },
+  {
+    _id: '42',
+    frisian: 'hûs',
+    dutch: 'huis',
+    pronunciation: 'hûs (met een lange oe-klank, zoals in het Engelse \'moo\')',
+    audioUrl: 'hûs.mp3'
+  },
+  {
+    _id: '43',
+    frisian: 'hoi',
+    dutch: 'hoi',
+    pronunciation: 'hoi',
+    audioUrl: 'hoi.mp3'
+  },
+  {
+    _id: '44',
+    frisian: 'jonge',
+    dutch: 'jongen',
+    pronunciation: 'jonge',
+    audioUrl: 'jonge.mp3'
+  },
+  {
+    _id: '45',
+    frisian: 'famke',
+    dutch: 'meisje',
+    pronunciation: 'famke',
+    audioUrl: 'famke.mp3'
+  },
+  {
+    _id: '46',
+    frisian: 'frou',
+    dutch: 'vrouw',
+    pronunciation: 'frou',
+    audioUrl: 'frou.mp3'
+  },
+  {
+    _id: '47',
+    frisian: 'man',
+    dutch: 'man',
+    pronunciation: 'mon',
+    audioUrl: 'man.mp3'
+  },
 ]
 
 // Fallback sentences for development/testing
@@ -431,6 +473,34 @@ const fallbackSentences = [
     dutch: 'Mooi weer vandaag!',
     pronunciation: 'Mooi waar jóé-\'t',
     audioUrl: 'moai-waar-hjoed.mp3'
+  },
+  {
+    _id: 's11',
+    frisian: 'Lekker koese!',
+    dutch: 'Slaap lekker!',
+    pronunciation: 'Lekker koese',
+    audioUrl: 'lekker-koese.mp3'
+  },
+  {
+    _id: 's12',
+    frisian: 'Ik bin 35 (fiifentritich).',
+    dutch: 'Ik ben 35.',
+    pronunciation: 'Ik bin fiif-en-trietig.',
+    audioUrl: 'ik-bin-35.mp3'
+  },
+  {
+    _id: 's13',
+    frisian: 'Hoe âld bisto?',
+    dutch: 'Hoe oud ben jij?',
+    pronunciation: 'Hoe òòt bisto?',
+    audioUrl: 'hoe-âld-bisto.mp3'
+  },
+  {
+    _id: 's14',
+    frisian: 'Wêr komst wei?',
+    dutch: 'Waar kom je vandaan?',
+    pronunciation: 'Wèèr komst waai/wòòi?',
+    audioUrl: 'wêr-komst-wei.mp3'
   }
 ]
 
@@ -772,7 +842,7 @@ const fallbackSounds = [
     combination: 'uo',
     pronunciation: 'wo (zoals in EN "won\'t")',
     example: 'skuon (schoenen)',
-    audioUrl: null
+    audioUrl: 'uo.mp3'
   },
   {
     _id: 'snd11',
@@ -793,7 +863,7 @@ const fallbackSounds = [
     combination: 'oai',
     pronunciation: 'ooi (zoals in NL "mooi")',
     example: 'moai (mooi)',
-    audioUrl: null
+    audioUrl: 'oai.mp3'
   }
 ]
 

@@ -58,5 +58,29 @@
     "dutch": "Mooi weer vandaag!",
     "pronunciation": "Mooi waar jóé-'t",
     "audioUrl": "moai-waar-hjoed.mp3"
+  },
+  {
+    "frisian": "Lekker koese!",
+    "dutch": "Slaap lekker!",
+    "pronunciation": "Lekker koese",
+    "audioUrl": "lekker-koese.mp3"
+  },
+  {
+    "frisian": "Ik bin 35 (fiifentritich).",
+    "dutch": "Ik ben 35.",
+    "pronunciation": "Ik bin fiif-en-trietig.",
+    "audioUrl": "ik-bin-35.mp3"
+  },
+  {
+    "frisian": "Hoe âld bisto?",
+    "dutch": "Hoe oud ben jij?",
+    "pronunciation": "Hoe òòt bisto?",
+    "audioUrl": "hoe-âld-bisto.mp3"
+  },
+  {
+    "frisian": "Wêr komst wei?",
+    "dutch": "Waar kom je vandaan?",
+    "pronunciation": "Wèèr komst waai/wòòi?",
+    "audioUrl": "wêr-komst-wei.mp3"
   }
 ]
