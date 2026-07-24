@@ -755,7 +755,7 @@ const fallbackWords = [
     frisian: 'tûzent',
     dutch: 'duizend',
     pronunciation: 'toezent (met een lange oe-klank, zoals in het Engelse \'moo\')',
-    audioUrl: 'tûsent.mp3'
+    audioUrl: 'tûzent.mp3'
   },
 ]
 
