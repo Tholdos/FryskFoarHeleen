@@ -405,168 +405,357 @@ const fallbackWords = [
     frisian: 'moarn',
     dutch: 'ochtend / morgen',
     pronunciation: 'mowen (rijmt op \'sân\' en \'lân\')',
-    audioUrl: null
+    audioUrl: 'moarn.mp3'
   },
   {
     _id: '49',
     frisian: 'middei',
     dutch: 'middag',
     pronunciation: 'middie',
-    audioUrl: null
+    audioUrl: 'middei.mp3'
   },
   {
     _id: '50',
     frisian: 'jûn',
     dutch: 'avond',
     pronunciation: 'joen',
-    audioUrl: null
+    audioUrl: 'jûn.mp3'
   },
   {
     _id: '51',
     frisian: 'hjoed',
     dutch: 'vandaag',
     pronunciation: 'hjoed',
-    audioUrl: null
+    audioUrl: 'hjoed.mp3'
   },
   {
     _id: '52',
     frisian: 'juster',
     dutch: 'gisteren',
     pronunciation: 'juster',
-    audioUrl: null
+    audioUrl: 'juster.mp3'
   },
   {
     _id: '53',
     frisian: 'moandei',
     dutch: 'maandag',
     pronunciation: 'mandie',
-    audioUrl: null
+    audioUrl: 'moandei.mp3'
   },
   {
     _id: '54',
     frisian: 'tiisdei',
     dutch: 'dinsdag',
     pronunciation: 'tiisdie',
-    audioUrl: null
+    audioUrl: 'tiisdei.mp3'
   },
   {
     _id: '55',
     frisian: 'woansdei',
     dutch: 'woensdag',
     pronunciation: 'waansdie',
-    audioUrl: null
+    audioUrl: 'woansdei.mp3'
   },
   {
     _id: '56',
     frisian: 'tongersdei',
     dutch: 'donderdag',
     pronunciation: 'towensdie (eerste deel rijmt op \'sân\' en \'lân\')',
-    audioUrl: null
+    audioUrl: 'tongersdei.mp3'
   },
   {
     _id: '57',
     frisian: 'freed',
     dutch: 'vrijdag',
     pronunciation: 'freet',
-    audioUrl: null
+    audioUrl: 'freed.mp3'
   },
   {
     _id: '58',
     frisian: 'sneon',
     dutch: 'zaterdag',
     pronunciation: 'sneu\'jn',
-    audioUrl: null
+    audioUrl: 'sneon.mp3'
   },
   {
     _id: '59',
     frisian: 'snein',
     dutch: 'zondag',
     pronunciation: 'snijn',
-    audioUrl: null
+    audioUrl: 'snein.mp3'
   },
   {
     _id: '60',
     frisian: 'yn',
     dutch: 'in',
     pronunciation: 'ien',
-    audioUrl: null
+    audioUrl: 'yn.mp3'
   },
   {
     _id: '61',
     frisian: 'út',
     dutch: 'uit',
     pronunciation: 'uut (rijmt op NL \'buut\')',
-    audioUrl: null
+    audioUrl: 'út.mp3'
   },
   {
     _id: '62',
     frisian: 'by',
     dutch: 'bij',
     pronunciation: 'bij',
-    audioUrl: null
+    audioUrl: 'by.mp3'
   },
   {
     _id: '63',
     frisian: 'op',
     dutch: 'op',
     pronunciation: 'op',
-    audioUrl: null
+    audioUrl: 'op.mp3'
   },
   {
     _id: '64',
     frisian: 'ôf',
     dutch: 'af',
     pronunciation: 'òòòh',
-    audioUrl: null
+    audioUrl: 'ôf.mp3'
   },
   {
     _id: '65',
     frisian: 'tusken',
     dutch: 'tussen',
     pronunciation: 'tusken',
-    audioUrl: null
+    audioUrl: 'tusken.mp3'
   },
   {
     _id: '66',
     frisian: 'troch',
     dutch: 'door',
     pronunciation: 'troch (ch wordt niet altijd uitgesproken)',
-    audioUrl: null
+    audioUrl: 'troch.mp3'
   },
   {
     _id: '67',
     frisian: 'nei',
     dutch: 'naar',
     pronunciation: 'ergens tussen "naai" en "nòòi"',
-    audioUrl: null
+    audioUrl: 'nei.mp3'
   },
   {
     _id: '68',
     frisian: 'mei',
     dutch: 'met',
     pronunciation: 'ergens tussen "maai" en "mòòi"',
-    audioUrl: null
+    audioUrl: 'mei.mp3'
   },
   {
     _id: '69',
     frisian: 'ûnder',
     dutch: 'onder',
     pronunciation: 'oender',
-    audioUrl: null
+    audioUrl: 'ûnder.mp3'
   },
   {
     _id: '70',
     frisian: 'boven',
     dutch: 'boven',
     pronunciation: 'boven (officieel Fries is boppe, maar dat zegt bijna niemand)',
-    audioUrl: null
+    audioUrl: 'boven.mp3'
   },
   {
     _id: '71',
     frisian: 'neist',
     dutch: 'naast',
     pronunciation: 'ergens tussen "naaist" en "nòòist"',
-    audioUrl: null
+    audioUrl: 'neist.mp3'
+  },
+  {
+    _id: '72',
+    frisian: 'ko',
+    dutch: 'koe',
+    pronunciation: 'koo',
+    audioUrl: 'ko.mp3'
+  },
+  {
+    _id: '73',
+    frisian: 'baarch',
+    dutch: 'varken',
+    pronunciation: 'baarg of barg',
+    audioUrl: 'baarch.mp3'
+  },
+  {
+    _id: '74',
+    frisian: 'skiep',
+    dutch: 'schaap',
+    pronunciation: 'skiejep',
+    audioUrl: 'skiep.mp3'
+  },
+  {
+    _id: '75',
+    frisian: 'hynder',
+    dutch: 'paard',
+    pronunciation: 'hiender',
+    audioUrl: 'hynder.mp3'
+  },
+  {
+    _id: '76',
+    frisian: 'hin',
+    dutch: 'kip',
+    pronunciation: 'hin',
+    audioUrl: 'hin.mp3'
+  },
+  {
+    _id: '77',
+    frisian: 'hoanne',
+    dutch: 'haan',
+    pronunciation: 'wanne (met een Engelse \'w\'-klank; rijmt op \'moanne\')',
+    audioUrl: 'hoanne.mp3'
+  },
+  {
+    _id: '78',
+    frisian: 'tennis',
+    dutch: 'tennis',
+    pronunciation: 'tennis',
+    audioUrl: 'tennis.mp3'
+  },
+  {
+    _id: '79',
+    frisian: 'hurdrinne',
+    dutch: 'hardlopen',
+    pronunciation: 'hut-rinne',
+    audioUrl: 'hurdrinne.mp3'
+  },
+  {
+    _id: '80',
+    frisian: 'reedride',
+    dutch: 'schaatsen',
+    pronunciation: 'reet-riede',
+    audioUrl: 'reedride.mp3'
+  },
+  {
+    _id: '81',
+    frisian: 'stoel',
+    dutch: 'stoel',
+    pronunciation: 'stoe-wul',
+    audioUrl: 'stoel.mp3'
+  },
+  {
+    _id: '82',
+    frisian: 'tafel',
+    dutch: 'tafel',
+    pronunciation: 'tafel',
+    audioUrl: 'tafel.mp3'
+  },
+  {
+    _id: '83',
+    frisian: 'bank',
+    dutch: 'bank',
+    pronunciation: 'bank',
+    audioUrl: 'bank.mp3'
+  },
+  {
+    _id: '84',
+    frisian: 'bêd',
+    dutch: 'bed',
+    pronunciation: 'bèèt',
+    audioUrl: 'bêd.mp3'
+  },
+  {
+    _id: '85',
+    frisian: 'stean',
+    dutch: 'staan',
+    pronunciation: 'stee\'jn',
+    audioUrl: 'stean.mp3'
+  },
+  {
+    _id: '86',
+    frisian: 'sitte',
+    dutch: 'zitten',
+    pronunciation: 'sitte',
+    audioUrl: 'sitte.mp3'
+  },
+  {
+    _id: '87',
+    frisian: 'lizze',
+    dutch: 'liggen',
+    pronunciation: 'leze',
+    audioUrl: 'lizze.mp3'
+  },
+  {
+    _id: '88',
+    frisian: 'rinne',
+    dutch: 'lopen',
+    pronunciation: 'rinne',
+    audioUrl: 'rinne.mp3'
+  },
+  {
+    _id: '89',
+    frisian: 'twintich',
+    dutch: 'twintig',
+    pronunciation: 'twintig',
+    audioUrl: 'twintich.mp3'
+  },
+  {
+    _id: '90',
+    frisian: 'tritich',
+    dutch: 'dertig',
+    pronunciation: 'trietig',
+    audioUrl: 'tritich.mp3'
+  },
+  {
+    _id: '91',
+    frisian: 'fjirtich',
+    dutch: 'veertig',
+    pronunciation: 'fjittig',
+    audioUrl: 'fjirtich.mp3'
+  },
+  {
+    _id: '92',
+    frisian: 'fyftich',
+    dutch: 'vijftig',
+    pronunciation: 'fieftig',
+    audioUrl: 'fyftich.mp3'
+  },
+  {
+    _id: '93',
+    frisian: 'sechstich',
+    dutch: 'zestig',
+    pronunciation: 'sekstig',
+    audioUrl: 'sechstich.mp3'
+  },
+  {
+    _id: '94',
+    frisian: 'santich',
+    dutch: 'zeventig',
+    pronunciation: 'sontig',
+    audioUrl: 'santich.mp3'
+  },
+  {
+    _id: '95',
+    frisian: 'tachtich',
+    dutch: 'tachtig',
+    pronunciation: 'tachtig',
+    audioUrl: 'tachtich.mp3'
+  },
+  {
+    _id: '96',
+    frisian: 'njoggentich',
+    dutch: 'negentig',
+    pronunciation: 'njoggentig',
+    audioUrl: 'njoggentich.mp3'
+  },
+  {
+    _id: '97',
+    frisian: 'hûndert',
+    dutch: 'honderd',
+    pronunciation: 'hoendet',
+    audioUrl: 'hûndert.mp3'
+  },
+  {
+    _id: '98',
+    frisian: 'tûzent',
+    dutch: 'duizend',
+    pronunciation: 'toezent (met een lange oe-klank, zoals in het Engelse \'moo\')',
+    audioUrl: 'tûsent.mp3'
   },
 ]
 
@@ -669,6 +858,48 @@ const fallbackSentences = [
     dutch: 'Waar kom je vandaan?',
     pronunciation: 'Wèèr komst waai/wòòi?',
     audioUrl: 'wêr-komst-wei.mp3'
+  },
+  {
+    _id: 's15',
+    frisian: 'Lekker ite!',
+    dutch: 'Eet smakelijk!',
+    pronunciation: 'lekker ite',
+    audioUrl: 'lekker-ite.mp3'
+  },
+  {
+    _id: 's16',
+    frisian: 'Lokwinske!',
+    dutch: 'Gefeliciteerd!',
+    pronunciation: 'lokweenske (met een beetje een nasale e-klank)',
+    audioUrl: 'lokwinske.mp3'
+  },
+  {
+    _id: 's17',
+    frisian: 'Goeiemiddei!',
+    dutch: 'Goedemiddag!',
+    pronunciation: 'goeie-middie',
+    audioUrl: 'goeiemiddei.mp3'
+  },
+  {
+    _id: 's18',
+    frisian: 'Goeiejûn!',
+    dutch: 'Goedenavond!',
+    pronunciation: 'goeie-joen',
+    audioUrl: 'goeiejûn.mp3'
+  },
+  {
+    _id: 's19',
+    frisian: 'Asjeblieft!',
+    dutch: 'Alsjeblieft!',
+    pronunciation: 'as-je-blieft',
+    audioUrl: 'asjeblieft.mp3'
+  },
+  {
+    _id: 's20',
+    frisian: 'Graach dien!',
+    dutch: 'Graag gedaan!',
+    pronunciation: 'graa die-jen (met harde Engelse \'g\' en rijmend op \'ien\' en \'tsien\')',
+    audioUrl: 'graach-dien.mp3'
   }
 ]
 

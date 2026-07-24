@@ -82,5 +82,41 @@
     "dutch": "Waar kom je vandaan?",
     "pronunciation": "Wèèr komst waai/wòòi?",
     "audioUrl": "wêr-komst-wei.mp3"
+  },
+  {
+    "frisian": "Lekker ite!",
+    "dutch": "Eet smakelijk!",
+    "pronunciation": "lekker ite",
+    "audioUrl": "lekker-ite.mp3"
+  },
+  {
+    "frisian": "Lokwinske!",
+    "dutch": "Gefeliciteerd!",
+    "pronunciation": "lokweenske (met een beetje een nasale e-klank)",
+    "audioUrl": "lokwinske.mp3"
+  },
+  {
+    "frisian": "Goeiemiddei!",
+    "dutch": "Goedemiddag!",
+    "pronunciation": "goeie-middie",
+    "audioUrl": "goeiemiddei.mp3"
+  },
+  {
+    "frisian": "Goeiejûn!",
+    "dutch": "Goedenavond!",
+    "pronunciation": "goeie-joen",
+    "audioUrl": "goeiejûn.mp3"
+  },
+  {
+    "frisian": "Asjeblieft!",
+    "dutch": "Alsjeblieft!",
+    "pronunciation": "as-je-blieft",
+    "audioUrl": "asjeblieft.mp3"
+  },
+  {
+    "frisian": "Graach dien!",
+    "dutch": "Graag gedaan!",
+    "pronunciation": "graa die-jen (met harde Engelse 'g' en rijmend op 'ien' en 'tsien')",
+    "audioUrl": "graach-dien.mp3"
   }
 ]
