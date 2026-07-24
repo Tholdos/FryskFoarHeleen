@@ -280,5 +280,149 @@
     "dutch": "man",
     "pronunciation": "mon",
     "audioUrl": "man.mp3"
+  },
+  {
+    "frisian": "moarn",
+    "dutch": "ochtend / morgen",
+    "pronunciation": "mowen (rijmt op 'sân' en 'lân')",
+    "audioUrl": null
+  },
+  {
+    "frisian": "middei",
+    "dutch": "middag",
+    "pronunciation": "middie",
+    "audioUrl": null
+  },
+  {
+    "frisian": "jûn",
+    "dutch": "avond",
+    "pronunciation": "joen",
+    "audioUrl": null
+  },
+  {
+    "frisian": "hjoed",
+    "dutch": "vandaag",
+    "pronunciation": "hjoed",
+    "audioUrl": null
+  },
+  {
+    "frisian": "juster",
+    "dutch": "gisteren",
+    "pronunciation": "juster",
+    "audioUrl": null
+  },
+  {
+    "frisian": "moandei",
+    "dutch": "maandag",
+    "pronunciation": "mandie",
+    "audioUrl": null
+  },
+  {
+    "frisian": "tiisdei",
+    "dutch": "dinsdag",
+    "pronunciation": "tiisdie",
+    "audioUrl": null
+  },
+  {
+    "frisian": "woansdei",
+    "dutch": "woensdag",
+    "pronunciation": "waansdie",
+    "audioUrl": null
+  },
+  {
+    "frisian": "tongersdei",
+    "dutch": "donderdag",
+    "pronunciation": "towensdie (eerste deel rijmt op 'sân' en 'lân')",
+    "audioUrl": null
+  },
+  {
+    "frisian": "freed",
+    "dutch": "vrijdag",
+    "pronunciation": "freet",
+    "audioUrl": null
+  },
+  {
+    "frisian": "sneon",
+    "dutch": "zaterdag",
+    "pronunciation": "sneu'jn",
+    "audioUrl": null
+  },
+  {
+    "frisian": "snein",
+    "dutch": "zondag",
+    "pronunciation": "snijn",
+    "audioUrl": null
+  },
+  {
+    "frisian": "yn",
+    "dutch": "in",
+    "pronunciation": "ien",
+    "audioUrl": null
+  },
+  {
+    "frisian": "út",
+    "dutch": "uit",
+    "pronunciation": "uut (rijmt op NL 'buut')",
+    "audioUrl": null
+  },
+  {
+    "frisian": "by",
+    "dutch": "bij",
+    "pronunciation": "bij",
+    "audioUrl": null
+  },
+  {
+    "frisian": "op",
+    "dutch": "op",
+    "pronunciation": "op",
+    "audioUrl": null
+  },
+  {
+    "frisian": "ôf",
+    "dutch": "af",
+    "pronunciation": "òòòh",
+    "audioUrl": null
+  },
+  {
+    "frisian": "tusken",
+    "dutch": "tussen",
+    "pronunciation": "tusken",
+    "audioUrl": null
+  },
+  {
+    "frisian": "troch",
+    "dutch": "door",
+    "pronunciation": "troch (ch wordt niet altijd uitgesproken)",
+    "audioUrl": null
+  },
+  {
+    "frisian": "nei",
+    "dutch": "naar",
+    "pronunciation": "ergens tussen \"naai\" en \"nòòi\"",
+    "audioUrl": null
+  },
+  {
+    "frisian": "mei",
+    "dutch": "met",
+    "pronunciation": "ergens tussen \"maai\" en \"mòòi\"",
+    "audioUrl": null
+  },
+  {
+    "frisian": "ûnder",
+    "dutch": "onder",
+    "pronunciation": "oender",
+    "audioUrl": null
+  },
+  {
+    "frisian": "boven",
+    "dutch": "boven",
+    "pronunciation": "boven (officieel Fries is boppe, maar dat zegt bijna niemand)",
+    "audioUrl": null
+  },
+  {
+    "frisian": "neist",
+    "dutch": "naast",
+    "pronunciation": "ergens tussen \"naaist\" en \"nòòist\"",
+    "audioUrl": null
   }
 ]

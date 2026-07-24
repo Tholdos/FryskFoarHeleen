@@ -400,6 +400,174 @@ const fallbackWords = [
     pronunciation: 'mon',
     audioUrl: 'man.mp3'
   },
+  {
+    _id: '48',
+    frisian: 'moarn',
+    dutch: 'ochtend / morgen',
+    pronunciation: 'mowen (rijmt op \'sân\' en \'lân\')',
+    audioUrl: null
+  },
+  {
+    _id: '49',
+    frisian: 'middei',
+    dutch: 'middag',
+    pronunciation: 'middie',
+    audioUrl: null
+  },
+  {
+    _id: '50',
+    frisian: 'jûn',
+    dutch: 'avond',
+    pronunciation: 'joen',
+    audioUrl: null
+  },
+  {
+    _id: '51',
+    frisian: 'hjoed',
+    dutch: 'vandaag',
+    pronunciation: 'hjoed',
+    audioUrl: null
+  },
+  {
+    _id: '52',
+    frisian: 'juster',
+    dutch: 'gisteren',
+    pronunciation: 'juster',
+    audioUrl: null
+  },
+  {
+    _id: '53',
+    frisian: 'moandei',
+    dutch: 'maandag',
+    pronunciation: 'mandie',
+    audioUrl: null
+  },
+  {
+    _id: '54',
+    frisian: 'tiisdei',
+    dutch: 'dinsdag',
+    pronunciation: 'tiisdie',
+    audioUrl: null
+  },
+  {
+    _id: '55',
+    frisian: 'woansdei',
+    dutch: 'woensdag',
+    pronunciation: 'waansdie',
+    audioUrl: null
+  },
+  {
+    _id: '56',
+    frisian: 'tongersdei',
+    dutch: 'donderdag',
+    pronunciation: 'towensdie (eerste deel rijmt op \'sân\' en \'lân\')',
+    audioUrl: null
+  },
+  {
+    _id: '57',
+    frisian: 'freed',
+    dutch: 'vrijdag',
+    pronunciation: 'freet',
+    audioUrl: null
+  },
+  {
+    _id: '58',
+    frisian: 'sneon',
+    dutch: 'zaterdag',
+    pronunciation: 'sneu\'jn',
+    audioUrl: null
+  },
+  {
+    _id: '59',
+    frisian: 'snein',
+    dutch: 'zondag',
+    pronunciation: 'snijn',
+    audioUrl: null
+  },
+  {
+    _id: '60',
+    frisian: 'yn',
+    dutch: 'in',
+    pronunciation: 'ien',
+    audioUrl: null
+  },
+  {
+    _id: '61',
+    frisian: 'út',
+    dutch: 'uit',
+    pronunciation: 'uut (rijmt op NL \'buut\')',
+    audioUrl: null
+  },
+  {
+    _id: '62',
+    frisian: 'by',
+    dutch: 'bij',
+    pronunciation: 'bij',
+    audioUrl: null
+  },
+  {
+    _id: '63',
+    frisian: 'op',
+    dutch: 'op',
+    pronunciation: 'op',
+    audioUrl: null
+  },
+  {
+    _id: '64',
+    frisian: 'ôf',
+    dutch: 'af',
+    pronunciation: 'òòòh',
+    audioUrl: null
+  },
+  {
+    _id: '65',
+    frisian: 'tusken',
+    dutch: 'tussen',
+    pronunciation: 'tusken',
+    audioUrl: null
+  },
+  {
+    _id: '66',
+    frisian: 'troch',
+    dutch: 'door',
+    pronunciation: 'troch (ch wordt niet altijd uitgesproken)',
+    audioUrl: null
+  },
+  {
+    _id: '67',
+    frisian: 'nei',
+    dutch: 'naar',
+    pronunciation: 'ergens tussen "naai" en "nòòi"',
+    audioUrl: null
+  },
+  {
+    _id: '68',
+    frisian: 'mei',
+    dutch: 'met',
+    pronunciation: 'ergens tussen "maai" en "mòòi"',
+    audioUrl: null
+  },
+  {
+    _id: '69',
+    frisian: 'ûnder',
+    dutch: 'onder',
+    pronunciation: 'oender',
+    audioUrl: null
+  },
+  {
+    _id: '70',
+    frisian: 'boven',
+    dutch: 'boven',
+    pronunciation: 'boven (officieel Fries is boppe, maar dat zegt bijna niemand)',
+    audioUrl: null
+  },
+  {
+    _id: '71',
+    frisian: 'neist',
+    dutch: 'naast',
+    pronunciation: 'ergens tussen "naaist" en "nòòist"',
+    audioUrl: null
+  },
 ]
 
 // Fallback sentences for development/testing
