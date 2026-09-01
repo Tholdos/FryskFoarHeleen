@@ -1,5 +1,9 @@
 <template>
   <div id="app">
+    <template v-if="unlocked">
+      <SecretPage @back="unlocked = false" />
+    </template>
+    <template v-else>
     <header class="app-header">
       <h1>Frysk foar Heleen</h1>
     </header>
@@ -93,13 +97,33 @@
     </main>
 
     <footer class="app-footer">
-      <p><img src="/Pompeblêd.svg" class="footer-icon" alt="" /> voor Heleen</p>
+      <p><img src="/Pompeblêd.svg" class="footer-icon clickable" alt="" @click="openPasswordModal" /> voor Heleen</p>
     </footer>
+    </template>
+
+    <div v-if="showPasswordModal" class="modal-overlay" @click.self="closePasswordModal">
+      <div class="modal">
+        <h2>Wachtwoord</h2>
+        <input
+          ref="passwordInputRef"
+          type="password"
+          v-model="passwordInput"
+          maxlength="6"
+          inputmode="numeric"
+          @keyup.enter="checkPassword"
+        />
+        <div v-if="passwordError" class="modal-error">{{ passwordError }}</div>
+        <div class="modal-actions">
+          <button @click="checkPassword">OK</button>
+          <button @click="closePasswordModal">Annuleren</button>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
 <script setup>
-import { ref, onMounted } from 'vue'
+import { ref, onMounted, nextTick } from 'vue'
 import { useWordStore } from './stores/wordStore'
 import { useSentenceStore } from './stores/sentenceStore'
 import { useVerbStore } from './stores/verbStore'
@@ -109,6 +133,9 @@ import SoundsView from './components/SoundsView.vue'
 import VerbsView from './components/VerbsView.vue'
 import MatchingGame from './components/MatchingGame.vue'
 import TypingGame from './components/TypingGame.vue'
+import SecretPage from './components/SecretPage.vue'
+
+const SECRET_PASSWORD = '435336'
 
 const wordStore = useWordStore()
 const sentenceStore = useSentenceStore()
@@ -116,6 +143,31 @@ const verbStore = useVerbStore()
 const currentMainTab = ref('flashcards')
 const currentSubTab = ref('woorden')
 const error = ref('')
+const unlocked = ref(false)
+const showPasswordModal = ref(false)
+const passwordInput = ref('')
+const passwordError = ref('')
+const passwordInputRef = ref(null)
+
+const openPasswordModal = () => {
+  passwordInput.value = ''
+  passwordError.value = ''
+  showPasswordModal.value = true
+  nextTick(() => passwordInputRef.value?.focus())
+}
+
+const closePasswordModal = () => {
+  showPasswordModal.value = false
+}
+
+const checkPassword = () => {
+  if (passwordInput.value === SECRET_PASSWORD) {
+    unlocked.value = true
+    showPasswordModal.value = false
+  } else {
+    passwordError.value = 'Ongeldig wachtwoord'
+  }
+}
 
 // Function to handle main tab selection and set appropriate default subtab
 const selectMainTab = (mainTab) => {
@@ -321,6 +373,80 @@ onMounted(async () => {
   vertical-align: middle;
   display: inline-block;
   margin: 0 0.2em;
+}
+
+.footer-icon.clickable {
+  cursor: pointer;
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 1rem;
+}
+
+.modal {
+  background: white;
+  border-radius: 12px;
+  padding: 2rem;
+  width: 100%;
+  max-width: 320px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  text-align: center;
+}
+
+.modal h2 {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.modal input {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0.6rem 0.75rem;
+  font-size: 1.1rem;
+  letter-spacing: 0.3em;
+  text-align: center;
+  border: 2px solid #667eea;
+  border-radius: 8px;
+}
+
+.modal-error {
+  color: #c33;
+  margin-top: 0.75rem;
+  font-size: 0.9rem;
+}
+
+.modal-actions {
+  display: flex;
+  gap: 0.75rem;
+  justify-content: center;
+  margin-top: 1.25rem;
+}
+
+.modal-actions button {
+  padding: 0.5rem 1.25rem;
+  font-size: 0.95rem;
+  border: 2px solid #667eea;
+  background: white;
+  color: #667eea;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.modal-actions button:first-child {
+  background: #667eea;
+  color: white;
 }
 
 /* Mobile optimizations */
