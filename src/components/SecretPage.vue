@@ -208,9 +208,8 @@ onBeforeUnmount(() => {
 // Placeholder gifts, indexed by reveal order. Replace with the real gift list later.
 // Wrap letters in *asterisks* to highlight them: 'Kra*s*loten' = color 1, 'Kra*2:s*loten' = color 2 (1-3 supported).
 // Use | to force a line break, e.g. 'Dagje|Welness'.
-const gifts = ['*3:xx*', 'KRAS*L**2:O*TEN', 'KAARTJ*E*', 'KERSE*N*BOOGER*2:D*', 'P*2:U*ZZ*E*L', '*H**2:E*T PARADIJS',
- 'DAGJ*E*|*2:W*ELNESS']
-// const gifts = ['CADEAU 1', 'CADEAU 2', 'CADEAU 3', 'CADEAU 4', 'CADEAU 5', 'CADEAU 6', 'CADEAU 7']
+const gifts = ['*3:xx*', 'KRAS*L**2:O*TEN', 'KAARTJ*E*S', 'KERSE*N*BOOGER*2:D*', 'S*2:U*SHISP*E*L', '*H**2:E*T PARADIJS',
+ 'HOT*E*L +|*2:W*ELNESS']
 
 const handleScratchStart = (index) => {
   if (revealOrder[index] !== undefined) return
