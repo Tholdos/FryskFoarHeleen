@@ -49,13 +49,14 @@ function parseSegments(line) {
 
 const textLines = computed(() => props.text.split('|').map(parseSegments))
 
-// Shrink the font as the visible text gets longer so it stays inside the small leaf shape
+// Shrink the font as the visible text gets longer so it stays inside the small leaf shape.
+// Uses cqw (container query width) so the size scales with the actual rendered pompeblêd size on any device.
 const fontSize = computed(() => {
   const len = props.text.replace(/\*(?:\d:)?/g, '').replace(/\|/g, '').length
-  if (len <= 10) return '0.55rem'
-  if (len <= 16) return '0.46rem'
-  if (len <= 22) return '0.4rem'
-  return '0.34rem'
+  if (len <= 10) return '11cqw'
+  if (len <= 16) return '9.2cqw'
+  if (len <= 22) return '8cqw'
+  return '6.8cqw'
 })
 
 const BRUSH_RADIUS = 16
@@ -139,6 +140,8 @@ onBeforeUnmount(() => {
   width: 100%;
   height: 100%;
   overflow: hidden;
+  /* Establishes a query container so .scratch-text can size its font in cqw units */
+  container-type: inline-size;
   /* Clip both the hidden text and the scratch coating to the pompeblêd silhouette */
   -webkit-mask-image: url('/Pompeblêd.svg');
   -webkit-mask-repeat: no-repeat;

@@ -196,7 +196,7 @@ function scheduleOverlaySequence() {
             capturedSources = null
           }
         }, 2000))
-      }, 10000))
+      }, 5000))
     }, 1300))
   }, 3000))
 }
