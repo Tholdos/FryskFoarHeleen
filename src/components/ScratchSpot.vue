@@ -1,6 +1,13 @@
 <template>
   <div class="scratch-spot" ref="containerRef">
-    <div class="scratch-text">{{ text }}</div>
+    <div class="scratch-text" :style="{ fontSize }">
+      <div v-for="(lineSegments, li) in textLines" :key="li" class="gift-line">
+        <template v-for="(segment, i) in lineSegments" :key="i">
+          <span v-if="segment.color" :class="'highlight-' + segment.color">{{ segment.text }}</span>
+          <template v-else>{{ segment.text }}</template>
+        </template>
+      </div>
+    </div>
     <canvas
       ref="canvasRef"
       class="scratch-canvas"
@@ -16,13 +23,40 @@
 </template>
 
 <script setup>
-import { ref, onMounted, onBeforeUnmount } from 'vue'
+import { ref, computed, onMounted, onBeforeUnmount } from 'vue'
 
-defineProps({
+const props = defineProps({
   text: { type: String, default: '' }
 })
 
 const emit = defineEmits(['scratch-start'])
+
+// Wrap letters in *asterisks* to highlight them, e.g. "Kra*s*loten" (color 1) or "Kra*2:s*loten" (color 2, 1-3 supported).
+// Use | to force a line break, e.g. "Dagje|Welness".
+function parseSegments(line) {
+  const segments = []
+  const regex = /\*(?:(\d):)?(.*?)\*/g
+  let lastIndex = 0
+  let match
+  while ((match = regex.exec(line)) !== null) {
+    if (match.index > lastIndex) segments.push({ text: line.slice(lastIndex, match.index), color: null })
+    segments.push({ text: match[2], color: Number(match[1]) || 1 })
+    lastIndex = regex.lastIndex
+  }
+  if (lastIndex < line.length) segments.push({ text: line.slice(lastIndex), color: null })
+  return segments
+}
+
+const textLines = computed(() => props.text.split('|').map(parseSegments))
+
+// Shrink the font as the visible text gets longer so it stays inside the small leaf shape
+const fontSize = computed(() => {
+  const len = props.text.replace(/\*(?:\d:)?/g, '').replace(/\|/g, '').length
+  if (len <= 10) return '0.55rem'
+  if (len <= 16) return '0.46rem'
+  if (len <= 22) return '0.4rem'
+  return '0.34rem'
+})
 
 const BRUSH_RADIUS = 16
 
@@ -120,15 +154,34 @@ onBeforeUnmount(() => {
   position: absolute;
   inset: 0;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   font-weight: 700;
-  font-size: 0.55rem;
+  line-height: 1.05;
   color: white;
   background: #667eea;
   text-align: center;
   padding: 0.2rem;
   user-select: none;
+  /* Nudge text down to stay inside the pompeblêd silhouette, which narrows near the top */
+  transform: translateY(12%);
+}
+
+.gift-line {
+  width: 100%;
+}
+
+.highlight-1 {
+  color: #ffd700;
+}
+
+.highlight-2 {
+  color: #00e5ff;
+}
+
+.highlight-3 {
+  color: #ff6ec7;
 }
 
 .scratch-canvas {
