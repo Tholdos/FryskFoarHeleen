@@ -3,7 +3,7 @@
     <button class="back-button" @click="$emit('back')">&larr; Terug</button>
     <p>Leave Heleen,</p>
     <p>Fan herte lokwinske mei dyn jierdei! 
-      Kras de pompeblêden iepen om te sjen watst wûn hast!</p>
+      Kras de pompeblêden iepen om te sjen wat foar kadootsjes ast krijst!</p>
     <p>-xx- Douwe</p>
 
     <div class="flag-container" ref="flagContainerRef">
