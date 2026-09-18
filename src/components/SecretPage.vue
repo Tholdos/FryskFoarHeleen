@@ -4,7 +4,8 @@
     <p>Leave Heleen,</p>
     <p>Fan herte lokwinske mei dyn jierdei! 
       Kras de pompeblêden iepen om te sjen wat foar kadootsjes ast krijst!</p>
-    <p>-xx- Douwe</p>
+    <p>Dikke tút</p>
+    <p>Douwe</p>
 
     <div class="flag-container" ref="flagContainerRef">
       <img src="/fryskeFlage.png" alt="Fryske flagge" class="flag-image" />
@@ -207,9 +208,9 @@ onBeforeUnmount(() => {
 
 // Placeholder gifts, indexed by reveal order. Replace with the real gift list later.
 // Wrap letters in *asterisks* to highlight them: 'Kra*s*loten' = color 1, 'Kra*2:s*loten' = color 2 (1-3 supported).
-// Use | to force a line break, e.g. 'Dagje|Welness'.
-const gifts = ['*3:xx*', 'KRAS*L**2:O*TEN', 'KAARTJ*E*S', 'KERSE*N*BOOGER*2:D*', 'S*2:U*SHISP*E*L', '*H**2:E*T PARADIJS',
- 'HOT*E*L +|*2:W*ELNESS']
+// Use | to force a line break, e.g. 'Dagje|Wellness'.
+const gifts = ['*3:xx*', 'KRAS*L*OT*2:E*N', 'KAARTJ*E*S', 'KERSE*N*BO*2:O*GERD', 'S*2:U*SHISP*E*L', '*H*ET PARA*2:D*IJS',
+ 'HOTEL +|*2:W*ELLN*E*SS']
 
 const handleScratchStart = (index) => {
   if (revealOrder[index] !== undefined) return

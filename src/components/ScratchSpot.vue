@@ -52,6 +52,8 @@ const textLines = computed(() => props.text.split('|').map(parseSegments))
 // Shrink the font as the visible text gets longer so it stays inside the small leaf shape.
 // Uses cqw (container query width) so the size scales with the actual rendered pompeblêd size on any device.
 const fontSize = computed(() => {
+  // Multi-line text (forced with |) already wraps into shorter lines, so it fits at full size.
+  if (props.text.includes('|')) return '11cqw'
   const len = props.text.replace(/\*(?:\d:)?/g, '').replace(/\|/g, '').length
   if (len <= 10) return '11cqw'
   if (len <= 16) return '9.2cqw'
