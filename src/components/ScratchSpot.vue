@@ -55,6 +55,7 @@ const fontSize = computed(() => {
   // Multi-line text (forced with |) already wraps into shorter lines, so it fits at full size.
   if (props.text.includes('|')) return '11cqw'
   const len = props.text.replace(/\*(?:\d:)?/g, '').replace(/\|/g, '').length
+  if (len <= 4) return '15cqw'
   if (len <= 10) return '11cqw'
   if (len <= 16) return '9.2cqw'
   if (len <= 22) return '8cqw'
